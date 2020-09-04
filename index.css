@@ -1,0 +1,12 @@
+.page-container {
+    display: flex;
+    justify-content: center;
+}
+
+#g1416 {
+    cursor: pointer;
+}
+
+#path1420 {
+    cursor: pointer;
+}

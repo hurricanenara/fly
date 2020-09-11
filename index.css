@@ -35,8 +35,7 @@ svg {
 }
 
 svg {
-    height: 800px;
-    width: 800px;
+    overflow: unset;
 }
 
 .paper-plane {

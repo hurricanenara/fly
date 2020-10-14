@@ -1,3 +1,10 @@
+const intro = document.querySelector('.intro');
+const text = intro.querySelector('h1');
+
+const controller = new ScrollMagic.Controller();
+
+
+
 const flightPath = {
     //curviness of 0 is rigid motion
     curviness: 1.25,
@@ -32,18 +39,27 @@ tween.add(
     })
 );
 
-const controller = new ScrollMagic.Controller();
 
-const scene = new ScrollMagic.Scene({
-    triggerElement: '.animation',
-    duration: 3000,
+let scene = new ScrollMagic.Scene({
+    triggerElement: intro,
+    duration: 9000,
     triggerHook: 0
 })
     .setTween(tween)
     .addIndicators()
-    .setPin('.animation')
+    .setPin('.intro')
     .addTo(controller)
+
+const textAnim = TweenMax.fromTo(text, 3, { opacity: 0}, {opacity: 1});
+
+let scene2 = new ScrollMagic.Scene({
+    duration: 9000,
+    triggerElement: intro,
+    triggerHook: 0
+})
+.setTween(textAnim)
+.addTo(controller)
 
 let riverStart = document.querySelector('#river')
 window.riverStart = riverStart;
-console.log(riverStart);
+// console.log(riverStart);

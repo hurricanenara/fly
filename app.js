@@ -1,5 +1,6 @@
 const intro = document.querySelector('.intro');
 const text = intro.querySelector('h1');
+const text2 = intro.querySelector('h2');
 
 const controller = new ScrollMagic.Controller();
 
@@ -42,7 +43,7 @@ tween.add(
 
 let scene = new ScrollMagic.Scene({
     triggerElement: intro,
-    duration: 9000,
+    duration: 20000,
     triggerHook: 0
 })
     .setTween(tween)
@@ -51,14 +52,34 @@ let scene = new ScrollMagic.Scene({
     .addTo(controller)
 
 const textAnim = TweenMax.fromTo(text, 3, { opacity: 0}, {opacity: 1});
+const textAnim2 = TweenMax.fromTo(text2, 3, { opacity: 0}, {opacity: 1});
 
 let scene2 = new ScrollMagic.Scene({
-    duration: 9000,
+    duration: 10000,
     triggerElement: intro,
-    triggerHook: 0
+    triggerHook: 0,
 })
+
 .setTween(textAnim)
+.addIndicators()
 .addTo(controller)
+
+// let scrollpos = 0;
+
+// scene2.on('update', e => {
+//     scrollpos = e.scrollPos / 1000;
+//     if (e.scrollPos > 6030 && e.scrollPos < 7000) {
+//         new ScrollMagic.Scene({
+//         duration: 10000,
+//         triggerElement: intro,
+//         triggerHook: 0,
+//     })
+//         .setTween(textAnim2)
+//         .addIndicators()
+//         .addTo(controller)
+//     };
+//     console.log(e.scrollPos);
+// })
 
 let riverStart = document.querySelector('#river')
 window.riverStart = riverStart;

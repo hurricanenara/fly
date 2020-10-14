@@ -9,12 +9,12 @@
 }
 
 .intro svg {
-    position: relative;
-    left: 5%;
-    top: 80px;
+    /* position: relative; */
+    left: 0;
+    padding-top: 30px;
     height: 50%;
     width: 50%;
-    
+    z-index: 0;
 }
 
 .intro h1 {
@@ -27,6 +27,23 @@
     z-index: 5;
 }
 
+.paper-plane {
+    /* position: absolute; */
+    height: 64px;
+    padding-left: 100px;
+    z-index: 5;
+}
+
+.first-mountain:hover {
+    cursor: pointer;
+    fill: chartreuse;
+}
+
+#m-1 #path1420:hover,
+#m-1 #path1418:hover {
+    fill: chartreuse;
+}
+
 .animation {
     /* height: 85vh; */
     /* width: 100%; */
@@ -36,28 +53,4 @@
     justify-content: center; */
     /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
     /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
-}
-
-
-.paper-plane {
-    height: 64px;
-    position: absolute;
-    top: 75%;
-    left: 2%;
-    z-index: 2;
-}
-
-.first-mountain:hover {
-    cursor: pointer;
-    fill: chartreuse;
-}
-
-
-/* #s-river path:hover {
-    fill: rgb(0, 111, 237);
-} */
-
-#m-1 #path1420:hover,
-#m-1 #path1418:hover {
-    fill: chartreuse;
 }

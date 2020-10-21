@@ -92,7 +92,7 @@ duration: '392%'
 let target2 = $('.section2').find('.box');
 let tl2 = new TimelineMax();
 
-tl2.from(target2, 1, { opacity: 0 });
+tl2.from(target2, 1, { opacity: 0, delay: 4 });
 tl2.to(target2, 1, { opacity: 0 }, 0.75);
 
 new ScrollMagic.Scene({
@@ -103,6 +103,8 @@ duration: '392%'
 .setTween(tl2)
 .addIndicators()
 .addTo(controller);
+
+
 
 // const textAnim = TweenMax.fromTo(text, 3, { opacity: 0}, {opacity: 1});
 // const textAnim2 = TweenMax.fromTo(text2, 3, { opacity: 0}, {opacity: 1});

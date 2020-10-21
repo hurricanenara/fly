@@ -59,13 +59,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-71%, -60%);
+    transform: translate(-77%, -50%);
     font-size: 80px;
     color: black;
     z-index: 5;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 200, 1);
     width: 51%;
-    height: 70%;
+    height: 80%;
 
 }
 

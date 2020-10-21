@@ -59,11 +59,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-77%, -50%);
+    transform: translate(-71%, -50%);
     font-size: 80px;
     color: black;
     z-index: 5;
-    background-color: rgba(255, 255, 200, 1);
+    background-color: rgba(255, 255, 205, 1);
     width: 51%;
     height: 80%;
 
@@ -78,8 +78,8 @@
 
 
 
-.box-2{ background-color: rgba(255, 255, 255, 1); }
-.box-3{ background-color: lightgreen; }
+.box-2{ background-color: rgba(255, 255, 255, 0.8); }
+.box-3{ background-color: rgba(144, 238, 144, 0.452); }
 
 /* .space{
   min-height: 80vh;

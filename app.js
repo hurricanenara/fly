@@ -1,9 +1,15 @@
 const intro = document.querySelector('.intro');
 const text = intro.querySelector('h1');
 const text2 = intro.querySelector('h2');
+let scrollPos;
 
 const controller = new ScrollMagic.Controller();
 
+$(window).on('scroll', function() {
+    // console.log( $(this).scrollTop() / 1000 );
+    scrollPos = $(this).scrollTop() / 1000;
+    console.log(scrollPos)
+});
 
 const flightPath = {
     //curviness of 0 is rigid motion
@@ -14,16 +20,16 @@ const flightPath = {
         { x: 300, y: -10 },
         { x: 500, y: -15 },
         { x: 555, y: -20 },
-        // { x: 555, y: -25 },
-        { x: 500, y: -250 },
-        { x: 400, y: -280 },
-        { x: 300, y: -350 },
-        { x: 200, y: -400 },
-        { x: 90, y: -420 },
-        { x: 200, y: -565 },
-        { x: 300, y: -565 },
-        { x: 400, y: -565 },
-        { x: 600, y: -565 },
+        { x: 800, y: -30 },
+        { x: 700, y: -270 },
+        { x: 400, y: -400 },
+        { x: 300, y: -400 },
+        { x: 200, y: -450 },
+        { x: 150, y: -500 },
+        { x: 200, y: -600 },
+        { x: 300, y: -660 },
+        { x: 400, y: -660 },
+        { x: 740, y: -680 },
         // { x: 534, y: -565 },
 
         // { x: window.innerWidth, y: -290 },
@@ -42,7 +48,7 @@ tween.add(
 
 let scene = new ScrollMagic.Scene({
     triggerElement: intro,
-    duration: 8000,
+    duration: 12000,
     triggerHook: 0
 })
     .setTween(tween)
@@ -78,32 +84,55 @@ let target1 = $('.section1').find('.box');
 let tl1 = new TimelineMax();
 
 tl1.from(target1, 1, { opacity: 0 });
-tl1.to(target1, 1, { opacity: 0 }, 0.75);
+// tl1.to(target1, 1, { opacity: 0 }, 0.75);
+// tl1.set(target1, {opacity: 0});
+tl1.to(target1, 1, {opacity: 1}, 0)
+    .to(target1, 1, {opacity: 0}, 0.75);
 
-new ScrollMagic.Scene({
+let projects = new ScrollMagic.Scene({
 triggerElement: intro,
 triggerHook: 0,
-duration: '392%'
+duration: 4000
 })
 .setTween(tl1)
 .addIndicators()
 .addTo(controller);
 
-let target2 = $('.section2').find('.box');
-let tl2 = new TimelineMax();
 
-tl2.from(target2, 1, { opacity: 0, delay: 4 });
-tl2.to(target2, 1, { opacity: 0 }, 0.75);
+
+if (scrollPos > 5.8) {
+    let target2 = $('.section2').find('.box');
+    let tl2 = new TimelineMax();
+
+    tl2.from(target2, 1, { opacity: 0});
+    tl2.to(target2, 1, {opacity: 1}, 0)
+        .to(target2, 1, {opacity: 0, }, 0.75);
+
+    new ScrollMagic.Scene({
+    triggerElement: intro,
+    triggerHook: 0,
+    duration: 5000
+    })
+    .setTween(tl2)
+    .addIndicators()
+    .addTo(controller);
+}
+
+
+let target3 = $('.section3').find('.box');
+let tl3 = new TimelineMax();
+
+tl3.from(target3, 1, { opacity: 0, delay: 25 });
+tl3.to(target3, 1, { opacity: 0 }, 0.75);
 
 new ScrollMagic.Scene({
 triggerElement: intro,
 triggerHook: 0,
-duration: '392%'
+duration: 8000
 })
-.setTween(tl2)
+.setTween(tl3)
 .addIndicators()
 .addTo(controller);
-
 
 
 // const textAnim = TweenMax.fromTo(text, 3, { opacity: 0}, {opacity: 1});

@@ -12,17 +12,23 @@ const flightPath = {
         { x: 100, y: 0 },
         { x: 300, y: -10 },
         { x: 500, y: -15 },
-        { x: 555, y: -20 },
-        { x: 600, y: -30 },
-        { x: 620, y: -270 },
-        { x: 400, y: -300 },
-        { x: 300, y: -420 },
-        { x: 200, y: -450 },
-        { x: 150, y: -500 },
-        { x: 200, y: -450 },
-        { x: 300, y: -500 },
+        { x: 555, y: -16 },
+        { x: 600, y: -17 },
+        { x: 620, y: -20 },
+        { x: 800, y: -21 },
+        { x: 950, y: -30 },
+        { x: 960, y: -50 },
+        { x: 800, y: -350 },
+        { x: 600, y: -450 },
+        { x: 500, y: -500 },
         { x: 400, y: -550 },
-        { x: 740, y: -600 },
+        { x: 300, y: -700 },
+        { x: 250, y: -750 },
+        { x: 300, y: -800 },
+        { x: 400, y: -810 },
+        { x: 600, y: -850 },
+        { x: 835, y: -850 },
+
     ]
 }
 
@@ -46,50 +52,117 @@ let scene = new ScrollMagic.Scene({
     .setPin('.intro')
     .addTo(controller)
 
+
 let target1 = $('.section1').find('.box');
 let tl1 = new TimelineMax();
 
-tl1.from(target1, 1, { opacity: 0 });
-tl1.to(target1, 1, {opacity: 0}, 0.75);
+tl1
+.fromTo(target1, 1, { opacity: 0 }, { opacity: 1 })
+.to(target1, 1, { opacity: 0 }, "+=0.5")
+;
 
 let projects = new ScrollMagic.Scene({
 triggerElement: intro,
 triggerHook: 0,
-duration: '400%'
+duration: 2000,
 })
     .setTween(tl1)
     .addIndicators()
+    .offset(2000)
+    .reverse(true)
     .addTo(controller);
 
 
-    let target2 = $('.section2').find('.box');
-    let tl2 = new TimelineMax();
 
-    tl2.from(target2, 1, { opacity: 0, delay: 15});
-    tl2.to(target2, 1, {opacity: 0, }, 0.75);
 
-    new ScrollMagic.Scene({
-    triggerElement: intro,
-    triggerHook: 0,
-    duration: 5000
-    })
-    .setTween(tl2)
-    .addIndicators()
-    .addTo(controller);
+
+let target2 = $('.section2').find('.box');
+let tl2 = new TimelineMax();
+
+tl2
+.fromTo(target2, 1, { opacity: 0 }, { opacity: 1 })
+.to(target2, 1, { opacity: 0 }, "+=0.5")
+;
+
+let experience = new ScrollMagic.Scene({
+  triggerElement: intro,
+  triggerHook: 0,
+  duration: 2000
+})
+  .setTween(tl2)
+  .addIndicators()
+  .offset(5000)
+  .reverse(true)
+  .addTo(controller);
+
+
 
 
 let target3 = $('.section3').find('.box');
 let tl3 = new TimelineMax();
 
-tl3.from(target3, 1, { opacity: 0, delay: 25 });
-tl3.to(target3, 1, { opacity: 0 }, 0.75);
+tl3
+.fromTo(target3, 1, { opacity: 0 }, { opacity: 1 })
+.to(target3, 1, { opacity: 0 }, "+=0.5")
+;
 
-new ScrollMagic.Scene({
+let education = new ScrollMagic.Scene({
 triggerElement: intro,
 triggerHook: 0,
-duration: 8000
+duration: 2000
 })
     .setTween(tl3)
     .addIndicators()
+    .offset(10000)
+    .reverse(true)
     .addTo(controller);
+
+
+
+// let target1 = $('.section1').find('.box');
+// let tl1 = new TimelineMax();
+
+// tl1.from(target1, 1, { opacity: 0 });
+// tl1.to(target1, 1, {opacity: 0}, 0.75);
+
+// let projects = new ScrollMagic.Scene({
+// triggerElement: intro,
+// triggerHook: 0,
+// duration: '400%'
+// })
+//     .setTween(tl1)
+//     .addIndicators()
+//     .addTo(controller);
+
+
+//     let target2 = $('.section2').find('.box');
+//     let tl2 = new TimelineMax();
+
+//     tl2.from(target2, 1, { opacity: 0, delay: 15});
+//     tl2.to(target2, 1, {opacity: 0, }, 0.75);
+
+//     new ScrollMagic.Scene({
+//     triggerElement: intro,
+//     triggerHook: 0,
+//     duration: 5000
+//     })
+//     .setTween(tl2)
+//     .addIndicators()
+//     .addTo(controller);
+
+
+// let target3 = $('.section3').find('.box');
+// let tl3 = new TimelineMax();
+
+// tl3.from(target3, 1, { opacity: 0, delay: 25 });
+// tl3.to(target3, 1, { opacity: 0 }, 0.75);
+
+// new ScrollMagic.Scene({
+// triggerElement: intro,
+// triggerHook: 0,
+// duration: 8000
+// })
+//     .setTween(tl3)
+//     .addIndicators()
+//     .addTo(controller);
 

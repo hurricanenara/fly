@@ -11,7 +11,7 @@
 .intro svg {
     /* position: relative; */
     left: 0;
-    padding-top: 30px;
+    padding-top: 60px;
     height: 50%;
     width: 50%;
     z-index: 0;
@@ -59,13 +59,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-71%, -50%);
+    transform: translate(-80%, -60%);
     font-size: 80px;
     color: black;
     z-index: 5;
-    background-color: rgba(255, 255, 205, 1);
+    background-color: rgba(255, 255, 255, 0.938);
     width: 51%;
     height: 80%;
+    border: black 1px dashed;
 
 }
 
@@ -78,8 +79,8 @@
 
 
 
-.box-2{ background-color: rgba(255, 255, 255, 0.8); }
-.box-3{ background-color: rgba(144, 238, 144, 0.452); }
+.box-2{ background-color: rgba(255, 255, 255, 0.932); }
+.box-3{ background-color: rgba(255, 255, 255, 0.918); }
 
 /* .space{
   min-height: 80vh;

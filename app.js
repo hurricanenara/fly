@@ -10,10 +10,10 @@ const flightPath = {
     autoRotate: true,
     values: [
         { x: 100, y: 0 },
-        { x: 300, y: -10 },
+        { x: 300, y: -15 },
         { x: 500, y: -15 },
         { x: 555, y: -16 },
-        { x: 600, y: -17 },
+        { x: 600, y: -20 },
         { x: 620, y: -20 },
         { x: 800, y: -21 },
         { x: 950, y: -30 },
@@ -68,7 +68,7 @@ duration: 2000,
 })
     .setTween(tl1)
     .addIndicators()
-    .offset(2000)
+    .offset(2100)
     .reverse(true)
     .addTo(controller);
 
@@ -91,7 +91,7 @@ let experience = new ScrollMagic.Scene({
 })
   .setTween(tl2)
   .addIndicators()
-  .offset(5000)
+  .offset(5800)
   .reverse(true)
   .addTo(controller);
 
@@ -113,7 +113,7 @@ duration: 2000
 })
     .setTween(tl3)
     .addIndicators()
-    .offset(10000)
+    .offset(8000)
     .reverse(true)
     .addTo(controller);
 

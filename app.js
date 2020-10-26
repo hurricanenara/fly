@@ -1,6 +1,7 @@
 const intro = document.querySelector('.intro');
 const text = intro.querySelector('h1');
 const text2 = intro.querySelector('h2');
+const river = document.querySelector('.river');
 
 const controller = new ScrollMagic.Controller();
 
@@ -169,3 +170,6 @@ duration: 4000,
 //     .addIndicators()
 //     .addTo(controller);
 
+
+window.river = river;
+console.log(river)

@@ -52,7 +52,6 @@ let scene = new ScrollMagic.Scene({
     .setPin('.intro')
     .addTo(controller)
 
-
 let target1 = $('.section1').find('.box');
 let tl1 = new TimelineMax();
 
@@ -115,6 +114,25 @@ duration: 2000
     .addIndicators()
     .offset(8000)
     .reverse(true)
+    .addTo(controller);
+
+let target4 = $('.indicator').find('span');
+let tl4 = new TimelineMax();
+
+tl4
+.fromTo(target4, 3, { opacity: 1 }, { opacity:  0})
+// .to(target4, 1, { opacity: 0 }, "+=0.5")
+;
+
+let indicator = new ScrollMagic.Scene({
+triggerElement: intro,
+triggerHook: 0,
+duration: 4000,
+})
+    .setTween(tl4)
+    .addIndicators()
+    .offset(1000)
+    // .reverse(true)
     .addTo(controller);
 
 

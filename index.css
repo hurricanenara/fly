@@ -13,16 +13,26 @@ body {
   width: 100vw;
 }
 
-.intro svg {
+.intro .ani-figure {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -58%);
     color: white;
+
+}
+
+.intro .ani-figure svg {
     min-width: 720px;
     min-height: 720px;
     max-width: 720px;
     max-height: 720px;
+}
+
+.paper-plane {
+  height: 8%;
+  position: fixed;
+  bottom: 1rem;
 }
 
 .indicator {

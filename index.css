@@ -6,9 +6,9 @@
 
 body {
     font-family: sans-serif;
-      /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
+      background-image: linear-gradient(to top, #93daf1 0%, #f9c3d4 100%);
       /* background-image: linear-gradient(to top, #d9afd9 78%, #97d9e1 100% ); */
-      background-image: linear-gradient(to top, #97d9e1 78%, #d9afd9 90%, #d9afd9 95%, #d9afd9 100% );
+      /* background-image: linear-gradient(to top, #97d9e1 78%, #d9afd9 90%, #d9afd9 95%, #d9afd9 100% ); */
   padding: 1%;
   /* overflow: hidden; */
 }
@@ -69,7 +69,7 @@ body {
     filter: url(#filter);
     box-shadow: 500px 500px 60px 0px rgb(255, 255, 255);
     position: absolute;
-    top: -350px;
+    top: -380px;
     left: -450px;
 }
 
@@ -80,10 +80,47 @@ body {
 .cloud-text {
   color: black;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -58%);
+  transform: translate(-50%, -50%);
   z-index: 10;
+}
+
+.social {
+  color: white;
+  position: fixed;
+  z-index: 5;
+}
+
+.social ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 42px;
+  padding: 5px 10px;
+}
+
+.social ul li {
+  margin-right: 27px;
+  cursor: pointer;
+}
+
+.social ul li a:link,
+.social ul li a:active,
+.social ul li a:visited {
+  color: white;
+}
+
+.fa-linkedin-square:hover {
+  color: #007bb5;
+}
+
+.fa-github-square:hover {
+  color: rgb(42, 195, 42);
+}
+
+.fa-angellist:hover {
+  color: black;
 }
 
 @-webkit-keyframes arrowMove {

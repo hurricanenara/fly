@@ -13,7 +13,7 @@ const flightPath = {
         { x: 100, y: -10 },
         { x: 600, y: -30 },
         { x: 500, y: -200},
-        { x: 200, y: -350},
+        { x: 100, y: -350},
         { x: 550, y: -500},
     ]
 }
@@ -38,7 +38,7 @@ let scene = new ScrollMagic.Scene({
     .setPin('.intro')
     .addTo(controller)
 
-let target1 = $('.section1').find('.box');
+let target1 = $('.section1').find('.cloud-circle');
 let tl1 = new TimelineMax();
 
 tl1
@@ -61,7 +61,7 @@ duration: 2000,
 
 
 
-let target2 = $('.section2').find('.box');
+let target2 = $('.section2').find('.cloud-circle');
 let tl2 = new TimelineMax();
 
 tl2
@@ -83,7 +83,7 @@ let experience = new ScrollMagic.Scene({
 
 
 
-let target3 = $('.section3').find('.box');
+let target3 = $('.section3').find('.cloud-circle');
 let tl3 = new TimelineMax();
 
 tl3

@@ -6,6 +6,11 @@
 
 body {
     font-family: sans-serif;
+      /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
+      /* background-image: linear-gradient(to top, #d9afd9 78%, #97d9e1 100% ); */
+      background-image: linear-gradient(to top, #97d9e1 78%, #d9afd9 90%, #d9afd9 95%, #d9afd9 100% );
+  padding: 1%;
+  /* overflow: hidden; */
 }
 
 .intro {
@@ -22,7 +27,7 @@ body {
 
 }
 
-.intro .ani-figure svg {
+.intro .ani-figure .story {
     min-width: 720px;
     min-height: 720px;
     max-width: 720px;
@@ -36,7 +41,8 @@ body {
 }
 
 .indicator {
-  color: rgb(171, 171, 171);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
   z-index: 5;
   font-size: 15px;
   text-align: center;
@@ -54,6 +60,22 @@ body {
 .indicator span:nth-child(2) {
   -webkit-animation: arrowMove 900ms infinite alternate;
           animation: arrowMove 900ms infinite alternate;
+}
+
+.cloud-circle {
+    width: 740px;
+    height: 605px;
+    border-radius: 50%;
+    filter: url(#filter);
+    box-shadow: 500px 500px 60px 0px rgb(255, 255, 255);
+    position: absolute;
+    top: -350px;
+    left: -450px;
+}
+
+.cloud-circle span {
+  color: black;
+
 }
 
 @-webkit-keyframes arrowMove {

@@ -1,4 +1,5 @@
 const intro = document.querySelector('.intro');
+const animation = document.querySelector('.ani-figure')
 const text = intro.querySelector('h1');
 const text2 = intro.querySelector('h2');
 const river = document.querySelector('.river');
@@ -43,10 +44,9 @@ let tl1 = new TimelineMax();
 
 tl1
 .fromTo(target1, 1, { opacity: 0 }, { opacity: 1 })
-.to(target1, 1, { opacity: 0 }, "+=0.5")
-;
+.to(target1, 1, { opacity: 0 }, "+=0.5");
 
-let projects = new ScrollMagic.Scene({
+let education = new ScrollMagic.Scene({
 triggerElement: intro,
 triggerHook: 0,
 duration: 2000,
@@ -57,17 +57,12 @@ duration: 2000,
     .reverse(true)
     .addTo(controller);
 
-
-
-
-
 let target2 = $('.section2').find('.cloud-circle');
 let tl2 = new TimelineMax();
 
 tl2
 .fromTo(target2, 1, { opacity: 0 }, { opacity: 1 })
-.to(target2, 1, { opacity: 0 }, "+=0.5")
-;
+.to(target2, 1, { opacity: 0 }, "+=0.5");
 
 let experience = new ScrollMagic.Scene({
   triggerElement: intro,
@@ -80,18 +75,14 @@ let experience = new ScrollMagic.Scene({
   .reverse(true)
   .addTo(controller);
 
-
-
-
 let target3 = $('.section3').find('.cloud-circle');
 let tl3 = new TimelineMax();
 
 tl3
 .fromTo(target3, 1, { opacity: 0 }, { opacity: 1 })
-.to(target3, 1, { opacity: 0 }, "+=0.5")
-;
+.to(target3, 1, { opacity: 0 }, "+=0.5");
 
-let education = new ScrollMagic.Scene({
+let projects = new ScrollMagic.Scene({
 triggerElement: intro,
 triggerHook: 0,
 duration: 2000
@@ -106,9 +97,7 @@ let target4 = $('.indicator').find('span');
 let tl4 = new TimelineMax();
 
 tl4
-.fromTo(target4, 3, { opacity: 1 }, { opacity:  0})
-// .to(target4, 1, { opacity: 0 }, "+=0.5")
-;
+.fromTo(target4, 3, { opacity: 1 }, { opacity:  0});
 
 let indicator = new ScrollMagic.Scene({
 triggerElement: intro,
@@ -121,55 +110,59 @@ duration: 4000,
     // .reverse(true)
     .addTo(controller);
 
+// text tween
 
+let textTarget1 = $('.section1').find('.cloud-text');
+let txt1 = new TimelineMax();
 
-// let target1 = $('.section1').find('.box');
-// let tl1 = new TimelineMax();
+txt1
+.fromTo(textTarget1, 1, { opacity: 0 }, { opacity: 1 })
+.to(textTarget1, 1, { opacity: 0 }, "+=0.5")
+;
 
-// tl1.from(target1, 1, { opacity: 0 });
-// tl1.to(target1, 1, {opacity: 0}, 0.75);
+let educationText= new ScrollMagic.Scene({
+triggerElement: intro,
+triggerHook: 0,
+duration: 2000,
+})
+    .setTween(txt1)
+    .addIndicators()
+    .offset(2100)
+    .reverse(true)
+    .addTo(controller);
 
-// let projects = new ScrollMagic.Scene({
-// triggerElement: intro,
-// triggerHook: 0,
-// duration: '400%'
-// })
-//     .setTween(tl1)
-//     .addIndicators()
-//     .addTo(controller);
+let textTarget2 = $('.section2').find('.cloud-text');
+let txt2 = new TimelineMax();
 
+txt2
+.fromTo(textTarget2, 1, { opacity: 0 }, { opacity: 1 })
+.to(textTarget2, 1, { opacity: 0 }, "+=0.5");
 
-//     let target2 = $('.section2').find('.box');
-//     let tl2 = new TimelineMax();
+let experienceText = new ScrollMagic.Scene({
+  triggerElement: intro,
+  triggerHook: 0,
+  duration: 2000
+})
+  .setTween(txt2)
+  .addIndicators()
+  .offset(5800)
+  .reverse(true)
+  .addTo(controller);
 
-//     tl2.from(target2, 1, { opacity: 0, delay: 15});
-//     tl2.to(target2, 1, {opacity: 0, }, 0.75);
+let textTarget3 = $('.section3').find('.cloud-text');
+let txt3 = new TimelineMax();
 
-//     new ScrollMagic.Scene({
-//     triggerElement: intro,
-//     triggerHook: 0,
-//     duration: 5000
-//     })
-//     .setTween(tl2)
-//     .addIndicators()
-//     .addTo(controller);
+txt3
+.fromTo(textTarget3, 1, { opacity: 0 }, { opacity: 1 })
+.to(textTarget3, 1, { opacity: 0 }, "+=0.5");
 
-
-// let target3 = $('.section3').find('.box');
-// let tl3 = new TimelineMax();
-
-// tl3.from(target3, 1, { opacity: 0, delay: 25 });
-// tl3.to(target3, 1, { opacity: 0 }, 0.75);
-
-// new ScrollMagic.Scene({
-// triggerElement: intro,
-// triggerHook: 0,
-// duration: 8000
-// })
-//     .setTween(tl3)
-//     .addIndicators()
-//     .addTo(controller);
-
-
-window.river = river;
-console.log(river)
+let projectsText = new ScrollMagic.Scene({
+triggerElement: intro,
+triggerHook: 0,
+duration: 2000
+})
+    .setTween(txt3)
+    .addIndicators()
+    .offset(8000)
+    .reverse(true)
+    .addTo(controller);

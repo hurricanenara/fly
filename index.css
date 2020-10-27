@@ -75,7 +75,15 @@ body {
 
 .cloud-circle span {
   color: black;
+}
 
+.cloud-text {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  z-index: 10;
 }
 
 @-webkit-keyframes arrowMove {

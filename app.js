@@ -18,6 +18,8 @@ window.addEventListener('resize', () => {
 })
 
 if (screen.width > 1024 ) {
+    $(".mobile").hide();
+    
     const controller = new ScrollMagic.Controller({
         // container: "#example-wrapper"
     });

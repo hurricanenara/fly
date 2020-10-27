@@ -6,13 +6,22 @@
 
 body {
   /* font-family: 'Kodchasan', sans-serif; */
+  /* overflow: hidden; */
+}
+
+.desktop {
   font-family: sans-serif;
   /* background-image: linear-gradient(to top, #93daf1 0%, #daf6ff 100%); */
   /* background-image: linear-gradient(to top, #a8edea 0%, #a8edea 30%, #fed6e3 100%); */
   /* background-image: linear-gradient(to top, #d9afd9 78%, #97d9e1 100% ); */
     background-image: linear-gradient(to top, #97d9e1 0%, #d9afd9 20%, #e6c63b 40%, #d9afd9 60%, #92cd90 100% );
   padding: 1%;
-  /* overflow: hidden; */
+}
+
+.mobile {
+  background-image: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%);
+  height: 100vh;
+  width: 100vw;
 }
 
 .intro {

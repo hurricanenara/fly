@@ -3,6 +3,10 @@ const animation = document.querySelector('.ani-figure')
 const text = intro.querySelector('h1');
 const text2 = intro.querySelector('h2');
 const river = document.querySelector('.river');
+const paperPlane = $('.paper-plane')
+
+console.log(paperPlane.position())
+console.log(paperPlane.scrollTop())
 
 const controller = new ScrollMagic.Controller();
 
@@ -37,7 +41,14 @@ let scene = new ScrollMagic.Scene({
     .setTween(tween)
     .addIndicators()
     .setPin('.intro')
-    .addTo(controller)
+    .addTo(controller);
+
+// scene.on('update', e => {
+//     console.log(e.scrollPos)
+//     if (e.scrollPos > 4000) {
+//         $('.education').remove()
+//     }
+// })
 
 let target1 = $('.section1').find('.cloud-circle');
 let tl1 = new TimelineMax();

@@ -41,10 +41,11 @@ body {
 }
 
 .indicator {
+  /* text-shadow: 1px 1px 1px white; */
   color: rgb(255, 255, 255);
   font-weight: 700;
   z-index: 5;
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
   position: fixed;
   bottom: 1rem;
@@ -98,6 +99,7 @@ body {
   row-gap: 13px;
   column-gap: 13px;
   height: 93%;
+  pointer-events: none;
 }
 
 .projects-grid-2 {
@@ -105,17 +107,49 @@ body {
   /* grid-template-columns: repeat(2, 1fr); */
   grid-template-rows: repeat(4, 1fr);
   row-gap: 13px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   /* column-gap: 13px; */
-  /* height: 93%; */
+  height: 93%;
+}
+
+.projects-grid-3 {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-rows: repeat(6, 1fr);
+  row-gap: 13px;
+  /* border: 1px solid gray; */
+  /* column-gap: 13px; */
+  height: 93%;
+}
+
+.projects-grid-2 h4 {
+  padding-bottom: 5px;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* row-gap: 10px; */
+}
+
+.tech-stack-heading {
+  display: flex;
+  align-items: flex-end;
+  grid-area: 1 / 1 / 1 / 4;
+}
+
+.tech-stack div {
+  padding: 13px;
+  text-align: center;
 }
 
 
 
 .projects-grid .grid-box {
-  border: 1px solid rgb(213, 213, 213);
+  border: 1px solid rgb(239, 239, 239);
   border-radius: 10px;
-  cursor: pointer;
+  cursor: default;
 }
 
 .grid-box .project-title {

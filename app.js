@@ -43,7 +43,7 @@ let target1 = $('.section1').find('.cloud-circle');
 let tl1 = new TimelineMax();
 
 tl1
-.fromTo(target1, 1, { opacity: 0 }, { opacity: 1 })
+.fromTo(target1, 1, { opacity: 0 }, { opacity: 0.94 })
 .to(target1, 1, { opacity: 0 }, "+=0.5");
 
 let education = new ScrollMagic.Scene({
@@ -61,7 +61,7 @@ let target2 = $('.section2').find('.cloud-circle');
 let tl2 = new TimelineMax();
 
 tl2
-.fromTo(target2, 1, { opacity: 0 }, { opacity: 1 })
+.fromTo(target2, 1, { opacity: 0 }, { opacity: 0.94 })
 .to(target2, 1, { opacity: 0 }, "+=0.5");
 
 let experience = new ScrollMagic.Scene({
@@ -79,7 +79,7 @@ let target3 = $('.section3').find('.cloud-circle');
 let tl3 = new TimelineMax();
 
 tl3
-.fromTo(target3, 1, { opacity: 0 }, { opacity: 1 })
+.fromTo(target3, 1, { opacity: 0 }, { opacity: 0.94 })
 .to(target3, 1, { opacity: 0 }, "+=0.5");
 
 let projects = new ScrollMagic.Scene({

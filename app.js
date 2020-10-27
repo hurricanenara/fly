@@ -181,6 +181,7 @@ duration: 2000
     .reverse(true)
     .addTo(controller);
 
+
 // if (isMobile) {
 //     var myScroll = new IScroll('#example-wrapper',
 //             {
@@ -213,3 +214,4 @@ duration: 2000
 // myScroll.on("scroll", function () {
 //     controller.update(true);
 // });
+

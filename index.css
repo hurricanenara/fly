@@ -70,8 +70,8 @@ body {
     z-index: 6;
   }
 
-.cloud-circle span {
-  color: black;
+  .cloud-circle span {
+    color: black;
   }
 
   .cloud-text {

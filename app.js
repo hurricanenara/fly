@@ -71,7 +71,7 @@ let experience = new ScrollMagic.Scene({
 })
   .setTween(tl2)
   .addIndicators()
-  .offset(5800)
+  .offset(5500)
   .reverse(true)
   .addTo(controller);
 

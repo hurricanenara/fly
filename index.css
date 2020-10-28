@@ -77,21 +77,7 @@ body {
           animation: arrowMove 900ms infinite alternate;
 }
 
-.cloud-circle {
-    width: 740px;
-    height: 605px;
-    border-radius: 50%;
-    filter: url(#filter);
-    box-shadow: 500px 500px 60px 0px rgb(255, 255, 255);
-    position: absolute;
-    top: -380px;
-    left: -475px;
-    z-index: 6;
-}
 
-.cloud-circle span {
-  color: black;
-}
 
 .cloud-text {
   color: black;
@@ -104,6 +90,18 @@ body {
   height: 65%;
   width: 65%;
   line-height: 20px;
+}
+
+.cloud-text h2 {
+  padding-bottom: 28px;
+}
+
+.cloud-text .content {
+  padding-top: 13px;
+}
+
+.cloud-text span {
+  font-size: 13px;
 }
 
 .projects-grid {
@@ -176,17 +174,7 @@ body {
   padding-top: 10px;
 }
 
-.cloud-text h2 {
-  padding-bottom: 28px;
-}
 
-.cloud-text .content {
-  padding-top: 13px;
-}
-
-.cloud-text span {
-  font-size: 13px;
-}
 
 .social {
   color: white;
@@ -225,7 +213,7 @@ body {
   color: black;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
   
   .intro .ani-figure {
     position: absolute;
@@ -243,6 +231,22 @@ body {
   }
   .indicator {
     color: white;
+  }
+
+  .cloud-circle {
+    width: 740px;
+    height: 605px;
+    border-radius: 50%;
+    filter: url(#filter);
+    box-shadow: 500px 500px 60px 0px rgb(255, 255, 255);
+    position: absolute;
+    top: -380px;
+    left: -475px;
+    z-index: 6;
+  }   
+
+  .cloud-circle span {
+    color: black;
   }
 }
 
@@ -262,6 +266,31 @@ body {
     margin-left: 2%;
     margin-right: 2%;
   }
+
+  .cloud-circle {
+    /* background-color: white; */
+    width: 50%;
+    height: 605px;
+    border-radius: 50%;
+    position: absolute;
+    top: -380px;
+    left: -475px;
+    z-index: 6;
+  }
+  .cloud-text {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    position: absolute;
+    /* top: 58%;
+    left: 60%; */
+    transform: translate(-60%, -85%);
+    z-index: 7;
+    /* border: 1px solid rgb(191, 191, 191); */
+    height: 50%;
+    width: 100%;
+    line-height: 15px;
+  }
+  
 }
 
 @-webkit-keyframes arrowMove {

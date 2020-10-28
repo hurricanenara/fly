@@ -12,6 +12,10 @@ const width = $(window).width();
 const innerHeight = window.innerHeight;
 const innerWidth = window.innerWidth;
 console.log(screen.width)
+console.log($('.story').position())
+const storyPos = $('.story').position();
+const storyHeight = $('.story').height();
+console.log(`Story H: ${storyHeight}, Story Pos: ${storyPos.top}`)
 
 window.addEventListener('resize', () => {
     console.log(`H: ${window.innerHeight}`, `W: ${window.innerWidth}`)
@@ -202,16 +206,18 @@ if (screen.width > 1024 ) {
  const controller = new ScrollMagic.Controller({
         // container: "#example-wrapper"
     });
+
+    $('.paper-plane-mobile').offset({top: storyPos.top + storyHeight, left: storyPos.left + 1})
     
     const flightPath = {
         //curviness of 0 is rigid motion
         curviness: 1.25,
         autoRotate: true,
         values: [
-            { x: screen.width * .185, y: -(screen.height * .01) },
-            { x: screen.width * .85, y: -(screen.height * 0.08) },
-            { x: screen.width * .1, y: -(screen.height * .45) },
-            { x: screen.width * .85, y: -(screen.height * 0.65) },
+            { x: screen.width * .185, y: -(storyHeight * .01) },
+            { x: screen.width * .85, y: -(storyHeight * 0.08) },
+            { x: screen.width * .1, y: -(storyHeight * .45) },
+            { x: screen.width * .85, y: -(storyHeight * 0.65) },
             // { x: 500, y: -200},
             // { x: 100, y: -350},
             // { x: 550, y: -500},

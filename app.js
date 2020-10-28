@@ -194,8 +194,10 @@ if (screen.width > 1024 ) {
     
     // $(".indicator").hide();
         
-} else if (screen.width < 1024) {
+} else if (screen.width <= 1024) {
     $(".desktop").hide();
+    console.log("Mobile W", screen.width * .185)
+    console.log("Mobile H", screen.height * .014)
 
  const controller = new ScrollMagic.Controller({
         // container: "#example-wrapper"
@@ -206,11 +208,13 @@ if (screen.width > 1024 ) {
         curviness: 1.25,
         autoRotate: true,
         values: [
-            { x: 100, y: -10 },
-            { x: 600, y: -30 },
-            { x: 500, y: -200},
-            { x: 100, y: -350},
-            { x: 550, y: -500},
+            { x: screen.width * .185, y: -(screen.height * .01) },
+            { x: screen.width * .85, y: -(screen.height * 0.08) },
+            { x: screen.width * .1, y: -(screen.height * .45) },
+            { x: screen.width * .85, y: -(screen.height * 0.65) },
+            // { x: 500, y: -200},
+            // { x: 100, y: -350},
+            // { x: 550, y: -500},
         ]
     }
     

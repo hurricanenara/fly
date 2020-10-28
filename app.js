@@ -1,4 +1,5 @@
 const intro = document.querySelector('.intro');
+const intro2 = document.querySelector('.intro-2');
 const animation = document.querySelector('.ani-figure')
 const text = intro.querySelector('h1');
 const text2 = intro.querySelector('h2');
@@ -19,7 +20,7 @@ window.addEventListener('resize', () => {
 
 if (screen.width > 1024 ) {
     $(".mobile").hide();
-    
+
     const controller = new ScrollMagic.Controller({
         // container: "#example-wrapper"
     });
@@ -45,7 +46,6 @@ if (screen.width > 1024 ) {
             ease: Power1.easeInOut
         })
     );
-    
     
     let scene = new ScrollMagic.Scene({
         triggerElement: intro,
@@ -195,16 +195,38 @@ if (screen.width > 1024 ) {
     // $(".indicator").hide();
         
 } else if (screen.width < 1024) {
-    // $('body').removeClass(['.paper-plane', '.story'])
     $(".desktop").hide();
-    // TweenMax.killall();
-    // scene.kill();
-    // education.kill();
-    // experience.kill();
-    // projects.kill();
-    // educationText.kill();
-    // experienceText.kill();
-    // projectsText.kill();
+
+    const controller = new ScrollMagic.Controller();
+    const tween = new TimelineLite();
+
+    let mobileTarget1 = $('.section-mobile')
+    let mobiletl1 = new TimelineMax();
+
+    let scene = new ScrollMagic.Scene({
+        triggerElement: intro2,
+        duration: 5000,
+        triggerHook: 0
+    })
+        .setTween(tween)
+        .addIndicators()
+        .setPin('.intro-2')
+        .addTo(controller);
+
+    mobiletl1
+    .fromTo(mobileTarget1, 1, { opacity: 0 }, { opacity: 0.94 })
+    .to(mobileTarget1, 1, { opacity: 0 }, "+=0.5");
+    
+    let education = new ScrollMagic.Scene({
+    triggerElement: intro2,
+    triggerHook: 0,
+    duration: 2000,
+    })
+        .setTween(mobiletl1)
+        .addIndicators()
+        .offset(2100)
+        .reverse(true)
+        .addTo(controller);
 }
 
 

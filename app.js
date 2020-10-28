@@ -11,11 +11,10 @@ const height = $(window).height();
 const width = $(window).width();
 const innerHeight = window.innerHeight;
 const innerWidth = window.innerWidth;
-console.log(screen.width)
-console.log($('.story').position())
-const storyPos = $('.story').position();
-const storyHeight = $('.story').height();
-console.log(`Story H: ${storyHeight}, Story Pos: ${storyPos.top}`)
+
+
+
+
 
 window.addEventListener('resize', () => {
     console.log(`H: ${window.innerHeight}`, `W: ${window.innerWidth}`)
@@ -23,22 +22,31 @@ window.addEventListener('resize', () => {
 })
 
 if (screen.width > 1024 ) {
+    const storyPos = $('.story').position();
+    const storyHeight = $('.story').height();
+    const storyWidth = $('.story').width();
+    const anifigureHeight = $('.ani-figure')
+    console.log(screen.height, screen.width, "Screen W and H")
+    console.log(`Story H: ${storyHeight}, Story W: ${storyWidth}, Story Pos: ${storyPos.top}`)
+    console.log($('.story').position())
+    
     $(".mobile").hide();
 
     const controller = new ScrollMagic.Controller({
         // container: "#example-wrapper"
     });
+
+    $('.paper-plane-mobile').offset({top: storyPos.top + storyHeight, left: storyPos.left + 1})
     
     const flightPath = {
         //curviness of 0 is rigid motion
         curviness: 1.25,
         autoRotate: true,
         values: [
-            { x: 100, y: -10 },
-            { x: 600, y: -30 },
-            { x: 500, y: -200},
-            { x: 100, y: -350},
-            { x: 550, y: -500},
+            { x: screen.width * .185, y: -(storyHeight * .01) },
+            { x: screen.width * .85, y: -(storyHeight * 0.08) },
+            { x: screen.width * .1, y: -(storyHeight * .45) },
+            { x: screen.width * .85, y: -(storyHeight * 0.65) },
         ]
     }
     
@@ -198,7 +206,22 @@ if (screen.width > 1024 ) {
     
     // $(".indicator").hide();
         
-} else if (screen.width <= 1024) {
+} else if (screen.width <= 1025) {
+    const storyPos = $('.story').position();
+    const storyHeight = $('.story').height();
+    const storyWidth = $('.story').width();
+    const aniFigure = $('.ani-figure')
+    const aniFigureH = aniFigure.height();
+    const anifigureHeight = $('.ani-figure')
+    const treeTrunk = $(".tree-trunk")
+    const treeTrunkPos = treeTrunk.position();
+    console.log(treeTrunk.position(), "Tree trunk")
+    
+    console.log(aniFigure)
+    console.log(screen.height, screen.width, "Screen W and H")
+    console.log(`Story H: ${storyHeight}, Story W: ${storyWidth}, Story Pos: ${storyPos.top}`)
+    console.log($('.story').position(), 'Story position')
+
     $(".desktop").hide();
     console.log("Mobile W", screen.width * .185)
     console.log("Mobile H", screen.height * .014)
@@ -207,17 +230,17 @@ if (screen.width > 1024 ) {
         // container: "#example-wrapper"
     });
 
-    $('.paper-plane-mobile').offset({top: storyPos.top + storyHeight, left: storyPos.left + 1})
+    $('.paper-plane-mobile').offset({top: treeTrunkPos.top + treeTrunkPos.top * 0.05, left: treeTrunkPos.left - treeTrunkPos.left * 0.6})
     
     const flightPath = {
         //curviness of 0 is rigid motion
         curviness: 1.25,
         autoRotate: true,
         values: [
-            { x: screen.width * .185, y: -(storyHeight * .01) },
-            { x: screen.width * .85, y: -(storyHeight * 0.08) },
-            { x: screen.width * .1, y: -(storyHeight * .45) },
-            { x: screen.width * .85, y: -(storyHeight * 0.65) },
+            { x: storyWidth * .185, y: -(storyHeight * .01) },
+            { x: storyWidth * .85, y: -(storyHeight * 0.08) },
+            { x: storyWidth * .1, y: -(storyHeight * .45) },
+            { x: storyWidth * .85, y: -(storyHeight * 0.65) },
             // { x: 500, y: -200},
             // { x: 100, y: -350},
             // { x: 550, y: -500},

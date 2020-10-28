@@ -19,13 +19,16 @@ body {
 }
 
 .mobile {
-  background-image: linear-gradient(to bottom, #e7d2f3 0%, #9face6 100%);
-    height: 100vh;
-    width: 100vw;
+  background-image: linear-gradient(to bottom, #7bcfc4 0%, #74c487 50%, #9face6 100%);
+  font-family: sans-serif;
+  /* background-image: linear-gradient(to top, #93daf1 0%, #daf6ff 100%); */
+  /* background-image: linear-gradient(to top, #a8edea 0%, #a8edea 30%, #fed6e3 100%); */
+  /* background-image: linear-gradient(to top, #d9afd9 78%, #97d9e1 100% ); */
+  padding: 1%;
 }
 
 .intro-2 {
-  height: 100%;
+  height: 100vh;
 }
 
 .intro {
@@ -54,6 +57,12 @@ body {
   height: 8%;
   position: fixed;
   bottom: 1rem;
+}
+
+.paper-plane-mobile {
+  height: 7%;
+  position: fixed;
+  bottom: 7rem;
 }
 
 .indicator {

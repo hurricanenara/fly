@@ -40,7 +40,7 @@ if (screen.width > 1024 ) {
         // container: "#example-wrapper"
     });
 
-    $('.paper-plane').offset({top: storyHeight * 1.35, left: storyPos.left * 1.1})
+    $('.paper-plane').offset({top: storyHeight + storyPos.top * .74, left: storyPos.left * 1.1})
     
     const flightPath = {
         //curviness of 0 is rigid motion
@@ -48,9 +48,9 @@ if (screen.width > 1024 ) {
         autoRotate: true,
         values: [
             { x: storyWidth * .185, y: -(storyHeight * .01) },
-            { x: storyWidth * .85, y: -(storyHeight * 0.08) },
-            { x: storyWidth * .1, y: -(storyHeight * .45) },
-            { x: storyWidth * .65, y: -(storyHeight * 0.65) },
+            { x: storyWidth * .8, y: -(storyHeight * 0.2) },
+            { x: storyWidth * .1, y: -(storyHeight * .6) },
+            { x: storyWidth * .65, y: -(storyHeight * 0.68) },
         ]
     }
     

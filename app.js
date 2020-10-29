@@ -40,7 +40,7 @@ if (screen.width > 1024 ) {
         // container: "#example-wrapper"
     });
 
-    $('.paper-plane').offset({top: storyHeight * 1.1, left: storyPos.left * 1.1})
+    $('.paper-plane').offset({top: storyHeight * 1.35, left: storyPos.left * 1.1})
     
     const flightPath = {
         //curviness of 0 is rigid motion
@@ -245,7 +245,7 @@ if (screen.width > 1024 ) {
         values: [
             { x: storyWidth * .185, y: -(storyHeight * .01) },
             { x: storyWidth * .85, y: -(storyHeight * 0.08) },
-            { x: storyWidth * .1, y: -(storyHeight * .45) },
+            { x: storyWidth * .1, y: -(storyHeight * .65) },
             { x: storyWidth * .78, y: -(storyHeight * 0.65) },
             // { x: 500, y: -200},
             // { x: 100, y: -350},
@@ -441,8 +441,8 @@ if (screen.width > 1024 ) {
         values: [
             { x: storyWidth * .185, y: -(storyHeight * .01) },
             { x: storyWidth * .85, y: -(storyHeight * 0.08) },
-            { x: storyWidth * .1, y: -(storyHeight * .45) },
-            { x: storyWidth * .70, y: -(storyHeight * 0.65) },
+            { x: storyWidth * .02, y: -(storyHeight * .70) },
+            { x: storyWidth * .70, y: -(storyHeight * 0.7) },
             // { x: 500, y: -200},
             // { x: 100, y: -350},
             // { x: 550, y: -500},

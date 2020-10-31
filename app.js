@@ -34,7 +34,7 @@ if (screen.width > 1024 ) {
         // container: "#example-wrapper"
     });
 
-    $('.paper-plane').offset({top: storyHeight + storyPos.top * .74, left: storyPos.left * 1.1})
+    $('.paper-plane').offset({top: storyHeight + storyPos.top * .5, left: storyPos.left * 1.1})
     
     const flightPath = {
         //curviness of 0 is rigid motion
@@ -204,7 +204,7 @@ if (screen.width > 1024 ) {
     
     // $(".indicator").hide();
         
-} else if (screen.width <= 1025 && screen.width >= 768) {
+} else if (screen.width <= 1025 && screen.width >= 767) {
     const storyPos = $('.story').position();
     const storyHeight = $('.story').height();
     const storyWidth = $('.story').width();

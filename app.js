@@ -34,7 +34,7 @@ if (screen.width > 1024 ) {
         // container: "#example-wrapper"
     });
 
-    $('.paper-plane').offset({top: storyHeight + storyPos.top * .5, left: storyPos.left * 1.1})
+    $('.paper-plane').offset({top: storyHeight + storyPos.top * .7, left: storyPos.left * 1.1})
     
     const flightPath = {
         //curviness of 0 is rigid motion

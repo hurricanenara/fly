@@ -73,8 +73,6 @@ body {
           animation: arrowMove 900ms infinite alternate;
 }
 
-
-
 .cloud-text {
   color: black;
   position: absolute;
@@ -86,10 +84,17 @@ body {
   height: 65%;
   width: 65%;
   line-height: 20px;
+  text-transform: uppercase;
 }
 
 .cloud-text h2 {
-  padding-bottom: 28px;
+  padding: 20px 0;
+  margin-bottom: 15px;
+  font-size: 30px;
+  border: 1px solid rgb(178, 1, 178);
+  width: 50%;
+  text-align: center;
+  margin-left: -30px;
 }
 
 .cloud-text .content {
@@ -102,11 +107,10 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: 13px;
-  column-gap: 13px;
-  height: 93%;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-rows: repeat(4, 1fr);
+  /* row-gap: 5px; */
+  height: 80%;
   pointer-events: none;
 }
 
@@ -114,7 +118,7 @@ body {
   display: grid;
   /* grid-template-columns: repeat(2, 1fr); */
   grid-template-rows: repeat(4, 1fr);
-  row-gap: 13px;
+  /* row-gap: 5px; */
   /* border: 1px solid gray; */
   /* column-gap: 13px; */
   height: 93%;
@@ -124,7 +128,7 @@ body {
   display: grid;
   /* grid-template-columns: repeat(2, 1fr); */
   grid-template-rows: repeat(6, 1fr);
-  row-gap: 13px;
+  /* row-gap: 5px; */
   /* border: 1px solid gray; */
   /* column-gap: 13px; */
   height: 93%;
@@ -155,8 +159,6 @@ body {
 
 
 .projects-grid .grid-box {
-  border: 1px solid rgb(239, 239, 239);
-  border-radius: 10px;
   cursor: default;
 }
 

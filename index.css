@@ -81,7 +81,7 @@ body {
   transform: translate(-50%, -50%);
   z-index: 7;
   /* border: 1px solid rgb(191, 191, 191); */
-  height: 65%;
+  height: 80%;
   width: 65%;
   line-height: 20px;
   text-transform: uppercase;
@@ -89,9 +89,9 @@ body {
 
 .cloud-text h2 {
   padding: 20px 0;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   font-size: 30px;
-  border: 1px solid rgb(178, 1, 178);
+  border-bottom: 3px solid rgb(178, 1, 178);
   width: 50%;
   text-align: center;
   margin-left: -30px;
@@ -115,13 +115,14 @@ body {
 }
 
 .projects-grid-2 {
+  padding-top: 10px;
   display: grid;
   /* grid-template-columns: repeat(2, 1fr); */
   grid-template-rows: repeat(4, 1fr);
   /* row-gap: 5px; */
   /* border: 1px solid gray; */
   /* column-gap: 13px; */
-  height: 93%;
+  height: 80%;
 }
 
 .projects-grid-3 {
@@ -139,21 +140,26 @@ body {
 }
 
 .tech-stack {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr); */
   /* row-gap: 10px; */
+  /* display: flex;
+  justify-content: flex-start; */
 }
 
 .tech-stack-heading {
-  display: flex;
-  align-items: flex-end;
-  grid-area: 1 / 1 / 1 / 4;
+  /* display: flex;
+  align-items: flex-end; */
+  /* grid-area: 1 / 1 / 1 / 4; */
 }
 
 .tech-stack div {
-  padding: 13px;
-  text-align: center;
+  font-size: 13px;
+  /* padding: 13px; */
+  /* text-align: center; */
+  /* display: flex;
+  flex-direction: column; */
 }
 
 

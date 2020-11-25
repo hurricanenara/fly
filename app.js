@@ -14,6 +14,14 @@ window.addEventListener('resize', () => {
     console.log(height, width)
 })
 
+const riverSVG = $('.river');
+const riverPos = $('.river').offset();
+const storySVG = $('.story');
+const storyPos = $('.story').offset();
+// console.log($('.story').height());
+// console.log(storySVG);
+// console.log($('.river').offset());
+
 if (screen.width > 1024 ) {
     // const storyPos = $('.story').position();
     const storyHeight = $('.story').height();
@@ -35,13 +43,8 @@ if (screen.width > 1024 ) {
     });
 
     // $('.paper-plane').offset({top: storyHeight + storyPos.top * .5, left: storyPos.left * 1.3})
-    const riverSVG = $('.river');
-    const riverPos = $('.river').offset();
-    const storySVG = $('.story');
-    const storyPos = $('.story').offset();
-    console.log($('.story').height());
-    console.log(storySVG);
-    console.log($('.river').offset())
+
+
     $('.paper-plane').offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left})
     
     const flightPath = {
@@ -239,7 +242,11 @@ if (screen.width > 1024 ) {
 
     // $('.paper-plane-mobile').offset({top: treeTrunkPos.top + treeTrunkPos.top * 0.05, left: treeTrunkPos.left - treeTrunkPos.left * 0.6})
     // $('.paper-plane-mobile').offset({top: treeTrunkPos.top * 1.05 , left: storyPos.left})
-    $('.paper-plane-mobile').offset({top: screen.height * .83 , left: screen.width * .08})
+    // $('.paper-plane-mobile').offset({top: screen.height * .83 , left: screen.width * .08});
+    $('.paper-plane-mobile').offset({top: storyHeight - $('.paper-plane-mobile').height() * 1.5, left: ($('.story').position().left)});
+    console.log($('.story').height());
+    console.log(storySVG);
+    // $('.paper-plane-mobile').offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left})
     
     const flightPath = {
         //curviness of 0 is rigid motion

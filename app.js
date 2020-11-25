@@ -244,8 +244,6 @@ if (screen.width > 1024 ) {
     // $('.paper-plane-mobile').offset({top: treeTrunkPos.top * 1.05 , left: storyPos.left})
     // $('.paper-plane-mobile').offset({top: screen.height * .83 , left: screen.width * .08});
     $('.paper-plane-mobile').offset({top: storyHeight - $('.paper-plane-mobile').height() * 1.5, left: ($('.story').position().left)});
-    console.log($('.story').height());
-    console.log(storySVG);
     // $('.paper-plane-mobile').offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left})
     
     const flightPath = {

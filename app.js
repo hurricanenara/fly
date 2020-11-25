@@ -15,18 +15,18 @@ window.addEventListener('resize', () => {
 })
 
 if (screen.width > 1024 ) {
-    const storyPos = $('.story').position();
+    // const storyPos = $('.story').position();
     const storyHeight = $('.story').height();
     const storyWidth = $('.story').width();
     const anifigureHeight = $('.ani-figure');
     const innerHeight = window.innerHeight;
     const innerWidth = window.innerWidth;
 
-    console.log(`Screen width: ${screen.width}`)
-    console.log(screen.height, screen.width, "Screen W and H")
-    console.log(`Story H: ${storyHeight}, Story W: ${storyWidth}, Story Pos: ${storyPos.top}`)
-    console.log($('.story').position())
-    console.log($(".ani-figure").css('padding-top'))
+    // console.log(`Screen width: ${screen.width}`)
+    // console.log(screen.height, screen.width, "Screen W and H")
+    // console.log(`Story H: ${storyHeight}, Story W: ${storyWidth}, Story Pos: ${storyPos.top}`)
+    // console.log($('.story').position())
+    // console.log($(".ani-figure").css('padding-top'))
     
     $(".mobile").hide();
 
@@ -34,7 +34,15 @@ if (screen.width > 1024 ) {
         // container: "#example-wrapper"
     });
 
-    $('.paper-plane').offset({top: storyHeight + storyPos.top * .5, left: storyPos.left * 1.3})
+    // $('.paper-plane').offset({top: storyHeight + storyPos.top * .5, left: storyPos.left * 1.3})
+    const riverSVG = $('.river');
+    const riverPos = $('.river').offset();
+    const storySVG = $('.story');
+    const storyPos = $('.story').offset();
+    console.log($('.story').height());
+    console.log(storySVG);
+    console.log($('.river').offset())
+    $('.paper-plane').offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left})
     
     const flightPath = {
         //curviness of 0 is rigid motion
@@ -46,7 +54,7 @@ if (screen.width > 1024 ) {
             { x: storyWidth * .1, y: -(storyHeight * .6) },
             { x: storyWidth * .65, y: -(storyHeight * 0.68) },
         ]
-    }
+    };
     
     const tween = new TimelineLite();
     

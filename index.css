@@ -126,6 +126,8 @@ body {
   /* border: 1px solid gray; */
   /* column-gap: 13px; */
   height: 80%;
+  margin-left: 5px;
+  font-size: 13px;
 }
 
 .projects-grid-3 {
@@ -343,6 +345,35 @@ body {
     height: 50%;
     width: 100%;
     line-height: 15px;
+  }
+
+  .cloud-text h2 {
+    padding: 13px 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    border: 3px solid rgb(178, 1, 178);
+    background-color: rgb(178, 1, 178);
+    border-radius: 20px;
+    width: 50%;
+    text-align: center;
+    margin-left: 5px;
+    color: white;
+  }
+  
+  .grid-box .project-title {
+    font-size: 16px;
+  }
+
+  .projects-grid-row span {
+    font-size: 14px;
+  }
+
+  .projects-grid-row .desc {
+    
+  }
+
+  .grid-box .project-desc {
+    font-size: 14px;
   }
 
   .paper-plane-mobile {

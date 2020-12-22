@@ -76,7 +76,7 @@ body {
 .cloud-text {
   color: black;
   position: absolute;
-  top: 58%;
+  top: 60%;
   left: 60%;
   transform: translate(-50%, -50%);
   z-index: 7;
@@ -89,12 +89,15 @@ body {
 
 .cloud-text h2 {
   padding: 20px 0;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   font-size: 30px;
-  border-bottom: 3px solid rgb(178, 1, 178);
+  border: 3px solid rgb(178, 1, 178);
+  background-color: rgb(178, 1, 178);
+  border-radius: 20px;
   width: 50%;
   text-align: center;
-  margin-left: -30px;
+  margin-left: -20px;
+  color: white;
 }
 
 .cloud-text .content {

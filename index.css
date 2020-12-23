@@ -347,6 +347,10 @@ body {
     line-height: 15px;
   }
 
+  .projects-grid-row .span {
+    color: red;
+  }
+
   .cloud-text h2 {
     padding: 13px 0;
     margin-bottom: 25px;
@@ -369,7 +373,7 @@ body {
   }
 
   .projects-grid-row .desc {
-    
+
   }
 
   .grid-box .project-desc {

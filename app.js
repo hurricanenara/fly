@@ -18,23 +18,15 @@ const riverSVG = $('.river');
 const riverPos = $('.river').offset();
 const storySVG = $('.story');
 const storyPos = $('.story').offset();
-// console.log($('.story').height());
-// console.log(storySVG);
-// console.log($('.river').offset());
 
 if (screen.width > 1024 ) {
-    // const storyPos = $('.story').position();
+    // console.log(config.apiKey, "key");
+    console.log(isMobile ? "Mobile" : "Desktop")
     const storyHeight = $('.story').height();
     const storyWidth = $('.story').width();
     const anifigureHeight = $('.ani-figure');
     const innerHeight = window.innerHeight;
     const innerWidth = window.innerWidth;
-
-    // console.log(`Screen width: ${screen.width}`)
-    // console.log(screen.height, screen.width, "Screen W and H")
-    // console.log(`Story H: ${storyHeight}, Story W: ${storyWidth}, Story Pos: ${storyPos.top}`)
-    // console.log($('.story').position())
-    // console.log($(".ani-figure").css('padding-top'))
     
     $(".mobile").hide();
 
@@ -216,6 +208,7 @@ if (screen.width > 1024 ) {
     // $(".indicator").hide();
         
 } else if (screen.width <= 1025 && screen.width >= 767) {
+    console.log(isMobile ? "Mobile" : "Desktop")
     const storyPos = $('.story').position();
     const storyHeight = $('.story').height();
     const storyWidth = $('.story').width();
@@ -415,7 +408,7 @@ if (screen.width > 1024 ) {
         .reverse(true)
         .addTo(controller);
 } else if (screen.width < 768) {
-
+    console.log(isMobile ? "Mobile" : "Desktop")
     const storyPos = $('.story').position();
     const storyHeight = $('.story').height();
     const storyWidth = $('.story').width();

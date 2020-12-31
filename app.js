@@ -87,11 +87,11 @@ if (screen.width > 1024 ) {
     let education = new ScrollMagic.Scene({
     triggerElement: intro,
     triggerHook: 0,
-    duration: 2000,
+    duration: 2200,
     })
         .setTween(tl1)
         .addIndicators()
-        .offset(2100)
+        .offset(2000)
         .reverse(true)
         .addTo(controller);
     
@@ -105,7 +105,7 @@ if (screen.width > 1024 ) {
     let experience = new ScrollMagic.Scene({
       triggerElement: intro,
       triggerHook: 0,
-      duration: 2000
+      duration: 2200
     })
       .setTween(tl2)
       .addIndicators()
@@ -123,7 +123,7 @@ if (screen.width > 1024 ) {
     let projects = new ScrollMagic.Scene({
     triggerElement: intro,
     triggerHook: 0,
-    duration: 2000
+    duration: 2200
     })
         .setTween(tl3)
         .addIndicators()

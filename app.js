@@ -9,6 +9,19 @@ let isMobile = (function(a){return /(android|bb\d+|meego).+mobile|avantgo|bada\/
 const height = $(window).height();
 const width = $(window).width();
 
+$(document).ready(() => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+
+  function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+})
+
 window.addEventListener('resize', () => {
     console.log(`H: ${window.innerHeight}`, `W: ${window.innerWidth}`)
     console.log(height, width)
@@ -20,6 +33,7 @@ const storySVG = $('.story');
 const storyPos = $('.story').offset();
 
 if (screen.width > 1024 ) {
+
     // console.log(config.apiKey, "key");
     console.log(isMobile ? "Mobile" : "Desktop")
     const storyHeight = $('.story').height();

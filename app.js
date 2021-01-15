@@ -768,7 +768,7 @@ function getWeather() {
                     weatherId = response.weather[0].id;
                     weatherDesc = response.weather[0].main;
                     console.log(weatherDesc);
-                    const weatherImage = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
+                    const weatherImage = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
                     if (weatherDesc === "Clouds") {
                         // initSnow();
                         document.querySelector(".weatherTemp").innerHTML += `<img src="${weatherImage}" alt="">`

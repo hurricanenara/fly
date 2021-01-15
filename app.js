@@ -761,13 +761,18 @@ function getWeather() {
                 type: "GET",
                 url: `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`,
                 success: function(response) {
-                    console.log(response.weather);
+                    const tempC = response.main.temp;
+                    const tempF = (tempC * (9/5)) + 32;
+                    const iconId = response.weather[0].icon;
+                    console.log(response);
                     weatherId = response.weather[0].id;
                     weatherDesc = response.weather[0].main;
                     console.log(weatherDesc);
+                    const weatherImage = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
                     if (weatherDesc === "Clouds") {
-                        initSnow();
-                        console.log(document.querySelector(".weather"))
+                        // initSnow();
+                        document.querySelector(".weatherTemp").innerHTML += `<img src="${weatherImage}" alt="">`
+                        + `<div>${tempF.toFixed(1)}&#8457;</div>`;
                         
                     }
                 }

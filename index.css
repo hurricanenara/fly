@@ -219,8 +219,21 @@ body {
 }
 
 .feedback {
+}
+
+.weatherTemp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
-  right: 3%;
+  right: 1%;
+  top: -40%
+  /* margin-top: 10px;
+  margin-right: 10px; */
+}
+
+.weatherTemp div {
+  margin-top: -17px;
 }
 
 .social div li a {

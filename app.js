@@ -759,7 +759,7 @@ function getWeather() {
             const longitude = position.coords.longitude;
             $.ajax({
                 type: "GET",
-                url: `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`,
+                url: `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`,
                 success: function(response) {
                     const tempC = response.main.temp;
                     const tempF = (tempC * (9/5)) + 32;

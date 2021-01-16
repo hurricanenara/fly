@@ -770,12 +770,12 @@ function getWeather() {
                     console.log(weatherDesc);
                     const weatherImage = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
                     if (weatherDesc) {
-                        if (weatherId < 600 && weatherId < 700) initSnow();
                         // initSnow();
                         document.querySelector(".weatherTemp").innerHTML += `<img src="${weatherImage}" alt="">`
                         + `<div>${tempF.toFixed(1)}&#8457;</div>`;
                         
                     }
+                    // if (weatherId < 600 && weatherId < 700) initSnow();
                 }
             })
         });

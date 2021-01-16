@@ -769,7 +769,7 @@ function getWeather() {
                     weatherDesc = response.weather[0].main;
                     console.log(weatherDesc);
                     const weatherImage = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
-                    if (weatherDesc === "Clouds") {
+                    if (weatherDesc) {
                         // initSnow();
                         document.querySelector(".weatherTemp").innerHTML += `<img src="${weatherImage}" alt="">`
                         + `<div>${tempF.toFixed(1)}&#8457;</div>`;

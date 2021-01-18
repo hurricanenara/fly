@@ -74,7 +74,7 @@ $(document).ready(() => {
             triggerHook: 0
         })
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .setPin('.intro')
             .addTo(controller);
         
@@ -98,7 +98,7 @@ $(document).ready(() => {
         duration: 2200,
         })
             .setTween(tl1)
-            .addIndicators()
+            // .addIndicators()
             .offset(2000)
             .reverse(true)
             .addTo(controller);
@@ -116,7 +116,7 @@ $(document).ready(() => {
           duration: 2200
         })
           .setTween(tl2)
-          .addIndicators()
+        //   .addIndicators()
           .offset(5500)
           .reverse(true)
           .addTo(controller);
@@ -134,7 +134,7 @@ $(document).ready(() => {
         duration: 2200
         })
             .setTween(tl3)
-            .addIndicators()
+            // .addIndicators()
             .offset(8000)
             .reverse(true)
             .addTo(controller);
@@ -151,7 +151,7 @@ $(document).ready(() => {
         duration: 4000,
         })
             .setTween(tl4)
-            .addIndicators()
+            // .addIndicators()
             .offset(1000)
             // .reverse(true)
             .addTo(controller);
@@ -172,7 +172,7 @@ $(document).ready(() => {
         duration: 2000,
         })
             .setTween(txt1)
-            .addIndicators()
+            // .addIndicators()
             .offset(2100)
             .reverse(true)
             .addTo(controller);
@@ -190,7 +190,7 @@ $(document).ready(() => {
           duration: 2000
         })
           .setTween(txt2)
-          .addIndicators()
+        //   .addIndicators()
           .offset(5800)
           .reverse(true)
           .addTo(controller);
@@ -208,7 +208,7 @@ $(document).ready(() => {
         duration: 2000
         })
             .setTween(txt3)
-            .addIndicators()
+            // .addIndicators()
             .offset(8000)
             .reverse(true)
             .addTo(controller);
@@ -277,7 +277,7 @@ $(document).ready(() => {
             triggerHook: 0
         })
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .setPin('.intro-2')
             .addTo(controller);
         
@@ -301,7 +301,7 @@ $(document).ready(() => {
         duration: 2000,
         })
             .setTween(tl1)
-            .addIndicators()
+            // .addIndicators()
             .offset(2100)
             .reverse(true)
             .addTo(controller);
@@ -319,7 +319,7 @@ $(document).ready(() => {
           duration: 2000
         })
           .setTween(tl2)
-          .addIndicators()
+        //   .addIndicators()
           .offset(5500)
           .reverse(true)
           .addTo(controller);
@@ -337,7 +337,7 @@ $(document).ready(() => {
         duration: 2000
         })
             .setTween(tl3)
-            .addIndicators()
+            // .addIndicators()
             .offset(8000)
             .reverse(true)
             .addTo(controller);
@@ -354,7 +354,7 @@ $(document).ready(() => {
         duration: 4000,
         })
             .setTween(tl4)
-            .addIndicators()
+            // .addIndicators()
             .offset(1000)
             // .reverse(true)
             .addTo(controller);
@@ -375,7 +375,7 @@ $(document).ready(() => {
         duration: 2000,
         })
             .setTween(txt1)
-            .addIndicators()
+            // .addIndicators()
             .offset(2100)
             .reverse(true)
             .addTo(controller);
@@ -393,7 +393,7 @@ $(document).ready(() => {
           duration: 2000
         })
           .setTween(txt2)
-          .addIndicators()
+        //   .addIndicators()
           .offset(5800)
           .reverse(true)
           .addTo(controller);
@@ -411,7 +411,7 @@ $(document).ready(() => {
         duration: 2000
         })
             .setTween(txt3)
-            .addIndicators()
+            // .addIndicators()
             .offset(8000)
             .reverse(true)
             .addTo(controller);
@@ -473,7 +473,7 @@ $(document).ready(() => {
             triggerHook: 0
         })
             .setTween(tween)
-            .addIndicators()
+            // .addIndicators()
             .setPin('.intro-2')
             .addTo(controller);
         
@@ -497,7 +497,7 @@ $(document).ready(() => {
         duration: 2000,
         })
             .setTween(tl1)
-            .addIndicators()
+            // .addIndicators()
             .offset(2100)
             .reverse(true)
             .addTo(controller);
@@ -515,7 +515,7 @@ $(document).ready(() => {
           duration: 2000
         })
           .setTween(tl2)
-          .addIndicators()
+        //   .addIndicators()
           .offset(5500)
           .reverse(true)
           .addTo(controller);
@@ -533,7 +533,7 @@ $(document).ready(() => {
         duration: 2000
         })
             .setTween(tl3)
-            .addIndicators()
+            // .addIndicators()
             .offset(8000)
             .reverse(true)
             .addTo(controller);
@@ -550,7 +550,7 @@ $(document).ready(() => {
         duration: 4000,
         })
             .setTween(tl4)
-            .addIndicators()
+            // .addIndicators()
             .offset(1000)
             // .reverse(true)
             .addTo(controller);
@@ -571,7 +571,7 @@ $(document).ready(() => {
         duration: 2000,
         })
             .setTween(txt1)
-            .addIndicators()
+            // .addIndicators()
             .offset(2100)
             .reverse(true)
             .addTo(controller);
@@ -589,7 +589,7 @@ $(document).ready(() => {
           duration: 2000
         })
           .setTween(txt2)
-          .addIndicators()
+        //   .addIndicators()
           .offset(5800)
           .reverse(true)
           .addTo(controller);
@@ -607,7 +607,7 @@ $(document).ready(() => {
         duration: 2000
         })
             .setTween(txt3)
-            .addIndicators()
+            // .addIndicators()
             .offset(8000)
             .reverse(true)
             .addTo(controller);

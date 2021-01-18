@@ -43,7 +43,12 @@ body {
   bottom: 1rem;
 }
 
+.st14{
+  fill:#FACC00;
+}
 
+.st15{fill:#FAF200;}
+.st16{fill:#D9FA00;}
 
 .indicator {
   /* text-shadow: 1px 1px 1px white; */

@@ -14,7 +14,7 @@ $(document).ready(() => {
 
     let weatherId = 0;
     let weatherDesc;
-    // import initSnow from './snow.js';
+    // import initWeather from './snow.js';
     
     window.addEventListener('resize', () => {
         console.log(`H: ${window.innerHeight}`, `W: ${window.innerWidth}`)
@@ -661,18 +661,22 @@ var snowMax = 150;
 
 // Snowflake Colours
 var snowColor = ["#DDD", "#EEE"];
+var rainColor = ["#4b688b", "rgba(28, 99, 186, 0.77)"];
 
 // Snow Entity
 var snowEntity = "&#x2022;";
+var rainEntity = "&#x7c;";
+var entity;
 
 // Falling Velocity
 var snowSpeed = 0.75;
+var rainSpeed = 3.75;
 
 // Minimum Flake Size
-var snowMinSize = 8;
+var snowMinSize = 16;
 
 // Maximum Flake Size
-var snowMaxSize = 24;
+var snowMaxSize = 28;
 
 // Refresh Rate (in milliseconds)
 var snowRefresh = 50;
@@ -700,7 +704,8 @@ function randomise(range) {
 	return rand;
 }
 
-function initSnow() {
+function initWeather(entityColor, entitySpeed, entity) {
+    entitySpeed === 0.75 ? entity = "&#x2022;" : "&#x7c;";
 	var snowSize = snowMaxSize - snowMinSize;
 	marginBottom = document.body.scrollHeight - 5;
 	marginRight = document.body.clientWidth - 15;
@@ -713,9 +718,9 @@ function initSnow() {
 		// snow[i].style.fontFamily = "inherit";
 		snow[i].size = randomise(snowSize) + snowMinSize;
 		snow[i].style.fontSize = snow[i].size + "px";
-		snow[i].style.color = snowColor[randomise(snowColor.length)];
+		snow[i].style.color = entityColor[randomise(entityColor.length)];
 		snow[i].style.zIndex = 1000;
-		snow[i].sink = snowSpeed * snow[i].size / 5;
+		snow[i].sink = entitySpeed * snow[i].size / 5;
 		snow[i].posX = randomise(marginRight - snow[i].size);
 		snow[i].posY = randomise(2 * marginBottom - marginBottom - 2 * snow[i].size);
 		snow[i].style.left = snow[i].posX + "px";
@@ -746,10 +751,6 @@ function moveSnow() {
 	setTimeout("moveSnow()", snowRefresh);
 }
 
-for (i = 0; i <= snowMax; i++) {
-    document.write("<span id='flake" + i + "' style='" + snowStyles + "position:fixed;top:-" + snowMaxSize + "'>" + snowEntity + "</span>");
-}
-
 function getWeather() {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition( function(position) { 
@@ -770,12 +771,13 @@ function getWeather() {
                     console.log(weatherDesc);
                     const weatherImage = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
                     if (weatherDesc) {
-                        // initSnow();
+                        // initWeather(snowColor, snowSpeed);
+                        snowEntity = "&#x7c;";
                         document.querySelector(".weatherTemp").innerHTML += `<img src="${weatherImage}" alt="">`
                         + `<div>${tempF.toFixed(1)}&#8457;</div>`;
                         
                     }
-                    // if (weatherId < 600 && weatherId < 700) initSnow();
+                    // if (weatherId < 600 && weatherId < 700) initWeather();
                 }
             })
         });
@@ -784,6 +786,16 @@ function getWeather() {
     }
 }
 
+for (i = 0; i <= snowMax; i++) {
+    document.write("<span id='flake" + i + "' style='" + snowStyles + "position:fixed;top:-" + snowMaxSize + "'>" + snowEntity + "</span>");
+}
+
+
+
+
+
+
 // window.addEventListener('resize', resize);
-// window.addEventListener('load', initSnow);
+// window.addEventListener('load', initWeather);
 window.addEventListener('load', getWeather);
+// window.addEventListener('load', render);

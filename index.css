@@ -113,10 +113,24 @@ body {
   font-size: 13px;
 }
 
+.projects-grid-2 {
+  display: grid;
+  row-gap: 32px;
+  grid-template-rows: repeat(4, 1fr);
+  padding-top: 15px;
+}
+
 .projects-grid {
   display: grid;
-  row-gap: 50px;
+  row-gap: 32px;
   grid-template-rows: repeat(4, 1fr);
+  padding-top: 15px;
+}
+
+.exp-grid-3 {
+  display: grid;
+  row-gap: 5px;
+  grid-template-rows: repeat(6, 1fr);
   padding-top: 15px;
 }
 
@@ -124,6 +138,7 @@ body {
   display: grid;
   grid-template-columns: 64px repeat(2, 1fr);
   column-gap: 10px;
+  height: 70px;
 }
 
 .project-row .icon {
@@ -168,6 +183,7 @@ body {
   display: grid;
   grid-template-columns: 64px repeat(2, 1fr);
   column-gap: 10px;
+  height: 70px;
 }
 
 .university .icon {
@@ -207,20 +223,6 @@ body {
 
 .certificate .icon-description {
   grid-area: 4 / 2 / 5 / 4;
-}
-
-.projects-grid-2 {
-  display: grid;
-  row-gap: 32px;
-  grid-template-rows: repeat(4, 1fr);
-  padding-top: 15px;
-}
-
-.exp-grid-3 {
-  display: grid;
-  row-gap: 18px;
-  grid-template-rows: repeat(6, 1fr);
-  padding-top: 15px;
 }
 
 .exp-grid-row {
@@ -417,13 +419,13 @@ body {
 
   .cloud-circle {
     width: 740px;
-    height: 605px;
-    border-radius: 50%;
+    height: 740px;
+    border-radius: 80%;
     filter: url(#filter);
     box-shadow: 500px 500px 60px 0px rgb(255, 255, 255);
     position: absolute;
-    top: -380px;
-    left: -475px;
+    top: -450px;
+    left: -495px;
     z-index: 6;
   }   
 

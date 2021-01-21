@@ -197,7 +197,7 @@ body {
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   align-items: center;
-  font-size: 58px;
+  font-size: 56px;
 }
 
 .university .icon-description {
@@ -206,7 +206,7 @@ body {
 
 .aA .icon {
   grid-area: 2 / 1 / 3 / 2;
-  font-size: 46px;
+  font-size: 42px;
 }
 
 .aA .icon-description {
@@ -215,7 +215,7 @@ body {
 
 .tech-stack .icon {
   grid-area: 3 / 1 / 4 / 2;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .tech-stack .icon-description {
@@ -224,7 +224,7 @@ body {
 
 .certificate .icon {
   grid-area: 4 / 1 / 5 /2;
-  font-size: 50px;
+  font-size: 45px;
   padding-left: 5px;
 }
 

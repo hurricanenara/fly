@@ -175,7 +175,7 @@ $(document).ready(() => {
         })
             .setTween(txt1)
             // .addIndicators()
-            .offset(2100)
+            .offset(1500)
             .reverse(true)
             .addTo(controller);
         

@@ -788,9 +788,9 @@ function getWeather() {
     }
 }
 
-for (i = 0; i <= snowMax; i++) {
-    document.write("<span id='flake" + i + "' style='" + snowStyles + "position:fixed;top:-" + snowMaxSize + "'>" + snowEntity + "</span>");
-}
+// for (i = 0; i <= snowMax; i++) {
+//     document.write("<span id='flake" + i + "' style='" + snowStyles + "position:fixed;top:-" + snowMaxSize + "'>" + snowEntity + "</span>");
+// }
 
 
 

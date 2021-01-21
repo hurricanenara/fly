@@ -18,7 +18,9 @@ $(document).ready(() => {
     
     window.addEventListener('resize', () => {
         console.log(`H: ${window.innerHeight}`, `W: ${window.innerWidth}`)
-        console.log(height, width)
+        console.log(height, width);
+        console.log("reload called")
+        this.location.reload();
     })
     
     const riverSVG = $('.river');
@@ -799,3 +801,11 @@ for (i = 0; i <= snowMax; i++) {
 // window.addEventListener('load', initWeather);
 window.addEventListener('load', getWeather);
 // window.addEventListener('load', render);
+// $(window).bind('resize', function(e) {
+//     console.log("resize called")
+//   if (window.RT) clearTimeout(window.RT);
+//   window.RT = setTimeout(function()
+//   {
+//     this.location.reload(false); /* false to get page from cache */
+//   }, 100);
+// });

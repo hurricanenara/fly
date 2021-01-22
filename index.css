@@ -94,19 +94,15 @@ body {
 }
 
 .cloud-text h2 {
-  /* padding: 20px 0;
-  font-size: 30px;
-  border: 3px solid rgb(178, 1, 178);
-  background-color: rgb(178, 1, 178);
-  border-radius: 20px;
-  width: 50%;
-  text-align: center;
-  margin-left: -20px; */
-  margin-bottom: 35px;
-  color: rgba(106, 106, 106, 0.353);
+  margin-bottom: 64px;
+  color: rgba(106, 106, 106, 0.64);
   width: 40%;
   font-size: 40px;
   font-weight: 800;
+}
+
+.experience .cloud-text h2 {
+  margin-bottom: 25px;
 }
 
 .cloud-text .content {
@@ -521,18 +517,6 @@ body {
     line-height: 15px;
   }
 
-  .cloud-text h2 {
-    /* padding: 13px 0;
-    margin-bottom: 25px;
-    font-size: 24px;
-    border: 3px solid rgb(178, 1, 178);
-    background-color: rgb(178, 1, 178);
-    border-radius: 20px;
-    width: 50%;
-    text-align: center; */
-    margin-left: 5px;
-    color: rgb(160, 159, 159);
-  }
   
   .grid-box .project-title {
     font-size: 16px;

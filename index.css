@@ -153,16 +153,16 @@ body {
   pointer-events: none;
 }
 
-.projects-grid .fa-pizza-slice:hover {
+.projects-grid .project-1:hover {
   color: orange;
 }
-.projects-grid .fa-robot:hover {
+.projects-grid .project-2:hover {
   color: rgb(156, 98, 155);
 }
-.projects-grid .fa-hand-rock:hover {
+.projects-grid .project-3:hover {
   color: rgb(147, 54, 54);
 }
-.projects-grid .fa-tint:hover {
+.projects-grid .project-4:hover {
   color: rgb(47, 255, 0);
 }
 

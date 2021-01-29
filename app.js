@@ -17,9 +17,9 @@ $(document).ready(() => {
     // import initWeather from './snow.js';
     
     window.addEventListener('resize', () => {
-        console.log(`H: ${window.innerHeight}`, `W: ${window.innerWidth}`)
-        console.log(height, width);
-        console.log("reload called")
+        // console.log(`H: ${window.innerHeight}`, `W: ${window.innerWidth}`)
+        // console.log(height, width);
+        // console.log("reload called")
         this.location.reload();
     })
     
@@ -31,7 +31,7 @@ $(document).ready(() => {
     if (screen.width > 1024 ) {
     
         // console.log(config.apiKey, "key");
-        console.log(isMobile ? "Mobile" : "Desktop")
+        // console.log(isMobile ? "Mobile" : "Desktop")
         const storyHeight = $('.story').height();
         const storyWidth = $('.story').width();
         const anifigureHeight = $('.ani-figure');
@@ -135,6 +135,8 @@ $(document).ready(() => {
         triggerHook: 0,
         duration: 2200
         })
+            .on("enter", () => $('.projects-grid a').css('pointer-events', 'auto'))
+            .on("leave", () => $('.projects-grid a').css('pointer-events', 'none'))
             .setTween(tl3)
             // .addIndicators()
             .offset(8000)
@@ -218,7 +220,7 @@ $(document).ready(() => {
         // $(".indicator").hide();
             
     } else if (screen.width <= 1025 && screen.width >= 767) {
-        console.log(isMobile ? "Mobile" : "Desktop")
+        // console.log(isMobile ? "Mobile" : "Desktop")
         const storyPos = $('.story').position();
         const storyHeight = $('.story').height();
         const storyWidth = $('.story').width();
@@ -227,17 +229,17 @@ $(document).ready(() => {
         const anifigureHeight = $('.ani-figure')
         const treeTrunk = $(".tree-trunk")
         const treeTrunkPos = treeTrunk.position();
-        console.log(treeTrunk.position(), "Tree trunk")
+        // console.log(treeTrunk.position(), "Tree trunk")
         
-        console.log(aniFigure)
-        console.log(screen.width, screen.height, "Screen W and H")
-        console.log(`Story H: ${storyHeight}, Story W: ${storyWidth}, Story Pos: ${storyPos.top}`)
-        console.log($('.story').position(), 'Story position')
-        console.log($('.story').offset(), 'Story offset')
+        // console.log(aniFigure)
+        // console.log(screen.width, screen.height, "Screen W and H")
+        // console.log(`Story H: ${storyHeight}, Story W: ${storyWidth}, Story Pos: ${storyPos.top}`)
+        // console.log($('.story').position(), 'Story position')
+        // console.log($('.story').offset(), 'Story offset')
     
         $(".desktop").hide();
-        console.log("Mobile W", screen.width * .185)
-        console.log("Mobile H", screen.height * .014)
+        // console.log("Mobile W", screen.width * .185)
+        // console.log("Mobile H", screen.height * .014)
     
      const controller = new ScrollMagic.Controller({
             // container: "#example-wrapper"

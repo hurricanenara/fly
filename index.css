@@ -141,6 +141,32 @@ body {
   height: 70px;
 }
 
+.projects-grid a:visited,
+.projects-grid a:active,
+.projects-grid a:link {
+  text-decoration: none;
+  color: black;
+  /* cursor: pointer; */
+}
+
+.projects-grid a {
+  pointer-events: none;
+}
+
+.projects-grid .fa-pizza-slice:hover {
+  color: orange;
+}
+.projects-grid .fa-robot:hover {
+  color: rgb(156, 98, 155);
+}
+.projects-grid .fa-hand-rock:hover {
+  color: rgb(147, 54, 54);
+}
+.projects-grid .fa-tint:hover {
+  color: rgb(47, 255, 0);
+}
+
+
 .project-row .icon {
   font-size: 45px;
   display: flex;
@@ -332,9 +358,6 @@ body {
 
 .social div li {
   list-style: none;
-}
-
-.feedback {
 }
 
 .weatherTemp {

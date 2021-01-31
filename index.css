@@ -20,7 +20,8 @@ body {
 }
 
 .mobile {
-  background-image: linear-gradient(to bottom, #7bcfc4 0%, #74c487 50%, #9face6 100%);
+  /* background-image: linear-gradient(to bottom, #7bcfc4 0%, #74c487 50%, #9face6 100%); */
+  background-color: orange;
   font-family: sans-serif;
   /* background-image: linear-gradient(to top, #93daf1 0%, #daf6ff 100%); */
   /* background-image: linear-gradient(to top, #a8edea 0%, #a8edea 30%, #fed6e3 100%); */
@@ -499,6 +500,7 @@ body {
 }
 
 @media only screen and (max-width: 415px) {
+  
   .indicator {
     color: red;
   }

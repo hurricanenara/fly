@@ -502,7 +502,7 @@ body {
 @media only screen and (max-width: 415px) {
   
   .indicator {
-    color: red;
+    color: white;
   }
   .intro-2 .ani-figure .story {
     min-width: 375;

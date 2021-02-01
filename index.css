@@ -469,16 +469,19 @@ body {
   }
 
   .cloud-circle {
-    width: 740px;
-    height: 740px;
-    border-radius: 80%;
-    filter: url(#filter);
-    box-shadow: 640px 640px 60px 0px rgb(255, 255, 255);
+    width: 450px;
+    height: 650px;
+    /* border-radius: 50%; */
+    /* filter: url(#filter);
+    box-shadow: 500px 500px 25px -20px rgb(255, 255, 255); */
     position: absolute;
-    top: -350px;
-    left: -520px;
+    top: 60px;
+    left: -170px;
     z-index: 6;
-  }  
+  }
+  .cloud-circle img {
+    height: 1300px;
+  }
   .cloud-text {
     color: black;
     position: absolute;

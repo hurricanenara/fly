@@ -329,6 +329,8 @@ $(document).ready(() => {
         triggerHook: 0,
         duration: 2000
         })
+            .on("enter", () => $('.projects-grid a').css('pointer-events', 'auto'))
+            .on("leave", () => $('.projects-grid a').css('pointer-events', 'none'))
             .setTween(tl3)
             // .addIndicators()
             .offset(8000)
@@ -522,6 +524,8 @@ $(document).ready(() => {
         triggerHook: 0,
         duration: 2000
         })
+            .on("enter", () => $('.projects-grid a').css('pointer-events', 'auto'))
+            .on("leave", () => $('.projects-grid a').css('pointer-events', 'none'))
             .setTween(tl3)
             // .addIndicators()
             .offset(8000)

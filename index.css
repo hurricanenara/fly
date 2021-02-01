@@ -502,7 +502,7 @@ body {
 @media only screen and (max-width: 415px) {
   
   .indicator {
-    color: white;
+    color: rgb(251, 251, 251);
   }
   .intro-2 .ani-figure .story {
     min-width: 375;
@@ -517,26 +517,27 @@ body {
     margin-right: 2%;
   }
 
-  .cloud-circle svg {
+  .cloud-circle {
     width: 450px;
-    height: 600px;
+    height: 650px;
     /* border-radius: 50%; */
     /* filter: url(#filter);
     box-shadow: 500px 500px 25px -20px rgb(255, 255, 255); */
     position: absolute;
-    top: 75px;
-    left: -70px;
+    top: 60px;
+    left: -138px;
     z-index: 6;
   }
-
-  .mob-cloud {
-    fill: rgb(225, 223, 223);
+  .cloud-circle img {
+    height: 95%;
   }
+
+
 
   .cloud-text {
     color: black;
     position: absolute;
-    top: 62%;
+    top: 65%;
     left: 60%;
     transform: translate(-50%, -50%);
     z-index: 7;
@@ -561,8 +562,11 @@ body {
 
   .exp-grid-3 {
     row-gap: 0px;
+    padding-top: 2px;
   }
-
+  .experience .cloud-text {
+    /* width: 100%; */
+  }
   .experience .cloud-text .exp-grid-row{
     height: 50%;
   }
@@ -595,6 +599,10 @@ body {
   .paper-plane-mobile {
     height: 6%;
     position: fixed;
+  }
+
+  .projects-grid {
+    row-gap: 24px;
   }
 }
 

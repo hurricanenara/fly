@@ -20,8 +20,7 @@ body {
 }
 
 .mobile {
-  /* background-image: linear-gradient(to bottom, #7bcfc4 0%, #74c487 50%, #9face6 100%); */
-  background-color: orange;
+  background-image: linear-gradient(to bottom, #7bcfc4 0%, #74c487 50%, #9face6 100%);
   font-family: sans-serif;
   /* background-image: linear-gradient(to top, #93daf1 0%, #daf6ff 100%); */
   /* background-image: linear-gradient(to top, #a8edea 0%, #a8edea 30%, #fed6e3 100%); */
@@ -454,8 +453,12 @@ body {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .cloud-circle img {
+    display: none;
+  }
+  }
   .indicator {
-    color: rgb(254, 242, 0);
+    color: rgb(201, 101, 224);
   }
 
   .exp-grid-3 {
@@ -469,19 +472,16 @@ body {
   }
 
   .cloud-circle {
-    width: 450px;
-    height: 650px;
-    /* border-radius: 50%; */
-    /* filter: url(#filter);
-    box-shadow: 500px 500px 25px -20px rgb(255, 255, 255); */
+    width: 740px;
+    height: 740px;
+    border-radius: 80%;
+    filter: url(#filter);
+    box-shadow: 640px 640px 60px 0px rgb(255, 255, 255);
     position: absolute;
-    top: 60px;
-    left: -170px;
+    top: -350px;
+    left: -520px;
     z-index: 6;
-  }
-  .cloud-circle img {
-    height: 1300px;
-  }
+  }  
   .cloud-text {
     color: black;
     position: absolute;
@@ -502,13 +502,9 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) {
-
+@media only screen and (min-width: 414px) and (max-width: 767px) {
   .indicator {
-    color: rgb(251, 251, 251);
-  }
-  .intro-2 {
-    height: 100vh;
+    color: red;
   }
   .intro-2 .ani-figure .story {
     min-width: 375;
@@ -524,26 +520,21 @@ body {
   }
 
   .cloud-circle {
-    width: 450px;
-    height: 650px;
-    /* border-radius: 50%; */
-    /* filter: url(#filter);
-    box-shadow: 500px 500px 25px -20px rgb(255, 255, 255); */
+    width: 420px;
+    height: 490px;
+    border-radius: 50%;
+    filter: url(#filter);
+    box-shadow: 500px 500px 25px -20px rgb(255, 255, 255);
     position: absolute;
-    top: 60px;
-    left: -138px;
+    top: -390px;
+    left: -520px;
     z-index: 6;
   }
-  .cloud-circle img {
-    height: 95%;
-  }
-
-
 
   .cloud-text {
     color: black;
     position: absolute;
-    top: 65%;
+    top: 62%;
     left: 60%;
     transform: translate(-50%, -50%);
     z-index: 7;
@@ -568,11 +559,8 @@ body {
 
   .exp-grid-3 {
     row-gap: 0px;
-    padding-top: 2px;
   }
-  .experience .cloud-text {
-    /* width: 100%; */
-  }
+
   .experience .cloud-text .exp-grid-row{
     height: 50%;
   }
@@ -605,10 +593,6 @@ body {
   .paper-plane-mobile {
     height: 6%;
     position: fixed;
-  }
-
-  .projects-grid {
-    row-gap: 24px;
   }
 }
 

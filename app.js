@@ -208,7 +208,8 @@ $(document).ready(() => {
         
         // $(".indicator").hide();
             
-    } else if (screen.width <= 1024 && screen.width >= 768) {
+    } else if (screen.width <= 1025 && screen.width >= 767) {
+        console.log("IPAD")
         // console.log(isMobile ? "Mobile" : "Desktop")
         const storyPos = $('.story').position();
         const storyHeight = $('.story').height();

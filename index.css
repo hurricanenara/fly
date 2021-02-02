@@ -503,7 +503,9 @@ body {
 }
 
 @media only screen and (max-width: 428px) {
-  
+  body {
+    height: 100vh;
+  }
   .indicator {
     color: rgb(251, 251, 251);
   }

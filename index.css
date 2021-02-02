@@ -503,11 +503,12 @@ body {
 }
 
 @media only screen and (max-width: 428px) {
-  body {
-    height: 100vh;
-  }
+
   .indicator {
     color: rgb(251, 251, 251);
+  }
+  .intro-2 {
+    height: 100vh;
   }
   .intro-2 .ani-figure .story {
     min-width: 375;

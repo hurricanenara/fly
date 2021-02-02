@@ -20,7 +20,8 @@ body {
 }
 
 .mobile {
-  background-image: linear-gradient(to bottom, #7bcfc4 0%, #74c487 50%, #9face6 100%);
+  /* background-image: linear-gradient(to bottom, #7bcfc4 0%, #74c487 50%, #9face6 100%); */
+  background-color: orange;
   font-family: sans-serif;
   /* background-image: linear-gradient(to top, #93daf1 0%, #daf6ff 100%); */
   /* background-image: linear-gradient(to top, #a8edea 0%, #a8edea 30%, #fed6e3 100%); */
@@ -452,10 +453,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .cloud-circle img {
-    display: none;
-  }
+@media only screen and (min-width: 429px) and (max-width: 1024px) {
   .indicator {
     color: rgb(201, 101, 224);
   }
@@ -501,9 +499,10 @@ body {
   }
 }
 
-@media only screen and (min-width: 414px) and (max-width: 767px) {
+@media only screen and (max-width: 428px) {
+  
   .indicator {
-    color: red;
+    color: rgb(251, 251, 251);
   }
   .intro-2 .ani-figure .story {
     min-width: 375;
@@ -519,21 +518,26 @@ body {
   }
 
   .cloud-circle {
-    width: 420px;
-    height: 490px;
-    border-radius: 50%;
-    filter: url(#filter);
-    box-shadow: 500px 500px 25px -20px rgb(255, 255, 255);
+    width: 450px;
+    height: 650px;
+    /* border-radius: 50%; */
+    /* filter: url(#filter);
+    box-shadow: 500px 500px 25px -20px rgb(255, 255, 255); */
     position: absolute;
-    top: -390px;
-    left: -520px;
+    top: 60px;
+    left: -138px;
     z-index: 6;
   }
+  .cloud-circle img {
+    height: 95%;
+  }
+
+
 
   .cloud-text {
     color: black;
     position: absolute;
-    top: 62%;
+    top: 65%;
     left: 60%;
     transform: translate(-50%, -50%);
     z-index: 7;
@@ -558,8 +562,11 @@ body {
 
   .exp-grid-3 {
     row-gap: 0px;
+    padding-top: 2px;
   }
-
+  .experience .cloud-text {
+    /* width: 100%; */
+  }
   .experience .cloud-text .exp-grid-row{
     height: 50%;
   }
@@ -592,6 +599,10 @@ body {
   .paper-plane-mobile {
     height: 6%;
     position: fixed;
+  }
+
+  .projects-grid {
+    row-gap: 24px;
   }
 }
 

@@ -453,7 +453,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 429px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .indicator {
     color: rgb(254, 242, 0);
   }
@@ -502,7 +502,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 768px) {
 
   .indicator {
     color: rgb(251, 251, 251);

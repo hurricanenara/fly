@@ -208,7 +208,7 @@ $(document).ready(() => {
         
         // $(".indicator").hide();
             
-    } else if (screen.width <= 1025 && screen.width >= 767) {
+    } else if (screen.width <= 1024 && screen.width >= 768) {
         // console.log(isMobile ? "Mobile" : "Desktop")
         const storyPos = $('.story').position();
         const storyHeight = $('.story').height();
@@ -238,6 +238,7 @@ $(document).ready(() => {
         // $('.paper-plane-mobile').offset({top: treeTrunkPos.top * 1.05 , left: storyPos.left})
         // $('.paper-plane-mobile').offset({top: screen.height * .83 , left: screen.width * .08});
         $('.paper-plane-mobile').offset({top: storyHeight - $('.paper-plane-mobile').height() * 1.5, left: ($('.story').position().left)});
+        // $('.paper-plane-mobile').offset({top: storyHeight * 1.6, left: storyPos.left * .60})
         // $('.paper-plane-mobile').offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left})
         
         const flightPath = {

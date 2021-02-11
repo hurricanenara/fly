@@ -90,9 +90,9 @@ $(document).ready(() => {
                 { x: storyWidth * .55, y: -(storyHeight * 0.7) },
             ]
         };
-        console.log(startPoint)
+        console.log(startPoint, 'startPoint')
         // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
-        plane.offset({left: startPoint.left});
+        plane.offset({top: startPoint.top, left: startPoint.left});
     }
     // import initWeather from './snow.js';
     

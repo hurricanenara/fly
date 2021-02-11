@@ -41,7 +41,7 @@ body {
   z-index: 0;
 }
 .start-point {
-  display: none;
+  fill: transparent;
 }
 
 .paper-plane {

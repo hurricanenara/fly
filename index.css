@@ -441,6 +441,9 @@ body {
   .indicator {
     color: white;
   }
+  .basic-cloud {
+    display: none;
+  }
 }
 
 .cloud-circle {

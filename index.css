@@ -461,6 +461,9 @@ body {
 
 @media (min-width: 320px) and (max-width: 480px) { 
   /* smartphones, iPhone, portrait 480x320 phones */
+  .indicator {
+    color: brown;
+  }
   .projects-grid-2 {
     row-gap: 1px;
     padding-top: 10px;

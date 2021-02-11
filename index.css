@@ -475,7 +475,7 @@ body {
     height: 520px;
     width: 520px;
     top: 18%;
-    right: -36%;
+    /* right: -36%; */
   }
   .basic-cloud {
     width: 300px;

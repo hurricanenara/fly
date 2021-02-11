@@ -50,7 +50,7 @@ $(document).ready(() => {
         console.log(basicClouds.height())
     }
 
-    if (isMobile) {
+    if (isMobile || screenWidth < 450) {
         cloudCircle.offset({top: -screenHeight * .35});
         console.log(basicClouds)
         // cloudCircle.width(300).height(300);
@@ -71,11 +71,9 @@ $(document).ready(() => {
                 { x: storyWidth * .68, y: -(storyHeight * .68) },
             ]
         };
-        console.log(flightPath)
 
         storySVG.offset({top: screenHeight * .2})
         storySVG.width(screenWidth * .95)
-        console.log(storySVG)
         // plane.offset({top: storySVG.height()});
 
         // .offset({top: (startPoint.top) + (screenHeight * .2), left: riverPos.left});

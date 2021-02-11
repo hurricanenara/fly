@@ -45,6 +45,7 @@ body {
   height: 8%;
   position: fixed;
   bottom: 1rem;
+  z-index: 4;
 }
 
 .st14{

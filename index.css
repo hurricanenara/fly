@@ -497,15 +497,16 @@ body {
     font-size: .8em;
   }
   .cloud-circle {
-    width: 370px;
-    height: 370px;
-    border-radius:30%;
-    filter: url(#filter);
-    box-shadow: 500px 500px 10px 0px rgb(255, 255, 255);
-    position: absolute;
+    display: none;
+    /* width: 370px; */
+    /* height: 370px; */
+    /* border-radius:30%; */
+    /* filter: url(#filter); */
+    /* box-shadow: 500px 500px 10px 0px rgb(255, 255, 255); */
+    /* position: absolute; */
     /* top: -450px;
     left: -495px; */
-    z-index: 6;
+    /* z-index: 6; */
   }
 
   .experience .cloud-text {
@@ -544,7 +545,8 @@ body {
     /* filter: url(#filter); */
     /* box-shadow: 500px 500px 15px 0px rgb(255, 255, 255); */
     /* position: absolute; */
-    top: -35%;
+    /* top: -35%; */
+    display: none;
     /* left: -38%; */
     /* z-index: 6; */
   }
@@ -569,17 +571,18 @@ body {
     color: blue;
   }
   .cloud-circle {
-    width: 740px;
-    height: 740px;
-    border-radius:80%;
-    filter: url(#filter);
-    box-shadow: 500px 500px 15px 0px rgb(255, 255, 255);
-    position: absolute;
-    top: -10%;
-    left: -38%;
+    /* width: 740px; */
+    /* height: 740px; */
+    /* border-radius:80%; */
+    /* filter: url(#filter); */
+    /* box-shadow: 500px 500px 15px 0px rgb(255, 255, 255); */
+    /* position: absolute; */
+    /* top: -10%; */
+    /* left: -38%; */
     /* top: -450px;
     left: -495px; */
-    z-index: 6;
+    /* z-index: 6; */
+    display: none;
   }
 
   .cloud-text {

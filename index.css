@@ -568,6 +568,10 @@ body {
     top: 10%;
     left: 4%;
   }
+  .cloud-text h2 {
+    margin-bottom: 24px;
+    font-size: 30px;
+  }
   /* CSS */
   .indicator {
     color: orange;
@@ -585,37 +589,25 @@ body {
     /* z-index: 6; */
   }
   .cloud-text {
-    /* color: black; */
-    /* position: absolute; */
-    top: 65%;
-    left: 52%;
-    /* transform: translate(-50%, -50%); */
-    /* z-index: 7; */
-    /* border: 1px solid rgb(191, 191, 191); */
-    /* height: 70%; */
-    /* width: 90%; */
-    /* line-height: 13px; */
-    /* text-transform: uppercase; */
+    top: 72%;
+    left: 54%;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   /* CSS */
+  .cloud-group {
+    position: absolute;
+    z-index: 3;
+    height: 950px;
+    width: 950px;
+    top: 10%;
+    left: 4%;
+  }
   .indicator {
     color: blue;
   }
   .cloud-circle {
-    /* width: 740px; */
-    /* height: 740px; */
-    /* border-radius:80%; */
-    /* filter: url(#filter); */
-    /* box-shadow: 500px 500px 15px 0px rgb(255, 255, 255); */
-    /* position: absolute; */
-    /* top: -10%; */
-    /* left: -38%; */
-    /* top: -450px;
-    left: -495px; */
-    /* z-index: 6; */
     display: none;
   }
 

@@ -43,6 +43,7 @@ $(document).ready(() => {
         };
         storySVG.offset({top: screenHeight * .08})
         storySVG.width(screenWidth * .95);
+        plane.width(78).height(78)
         plane.offset({top: startPoint.top, left: startPoint.left}).width(78).height(78)
         console.log(plane.position())
     }
@@ -91,7 +92,7 @@ $(document).ready(() => {
         };
         console.log(startPoint)
         // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
-        plane.offset(startPoint);
+        plane.offset({left: startPoint.left});
     }
     // import initWeather from './snow.js';
     
@@ -184,7 +185,7 @@ $(document).ready(() => {
           triggerElement: intro,
           triggerHook: 0,
           duration: 2200
-        })
+        })  
           .setTween(tl2)
         //   .addIndicators()
           .offset(5500)
@@ -203,8 +204,10 @@ $(document).ready(() => {
         triggerHook: 0,
         duration: 2200
         })
-            .on("enter", () => $('.projects-grid a').css('pointer-events', 'auto'))
+            .on("enter", () =>  $('.projects-grid a').css('pointer-events', 'auto'))
+            // .on("enter", () =>  $('.paper-plane').css('z-index', 0))
             .on("leave", () => $('.projects-grid a').css('pointer-events', 'none'))
+            // .on("leave", () =>  $('.paper-plane').css('z-index', 1))
             .setTween(tl3)
             // .addIndicators()
             .offset(8000)

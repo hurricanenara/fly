@@ -38,14 +38,17 @@ body {
 .intro {
   height: 100vh;
   width: 100vw;
+  z-index: 0;
 }
-
+.start-point {
+  display: none;
+}
 
 .paper-plane {
   height: 8%;
   position: fixed;
   bottom: 1rem;
-  z-index: 4;
+  z-index: 1;
 }
 
 .st14{
@@ -423,7 +426,9 @@ body {
 
 
 @media only screen and (min-width: 1025px) {
-  
+  .cloud-group {
+    display: none;
+  }
   .intro .ani-figure {
     position: absolute;
     top: 50%;
@@ -464,6 +469,18 @@ body {
 
 @media (min-width: 320px) and (max-width: 480px) { 
   /* smartphones, iPhone, portrait 480x320 phones */
+  .cloud-group {
+    position: absolute;
+    z-index: 3;
+    height: 520px;
+    width: 520px;
+    top: 18%;
+    right: -36%;
+  }
+  .basic-cloud {
+    width: 300px;
+  }
+  
   .indicator {
     color: brown;
   }
@@ -497,7 +514,11 @@ body {
     line-height: 14px;
   }
   .exp-grid-row {
-    column-gap: 3px;
+    column-gap: 1px;
+  }
+
+  .exp-grid-row:last-of-type {
+    height: 25px;
   }
   .exp-grid-3 span {
     font-size: .8em;
@@ -539,7 +560,14 @@ body {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  
+  .cloud-group {
+    position: absolute;
+    z-index: 3;
+    height: 950px;
+    width: 950px;
+    top: 10%;
+    left: 4%;
+  }
   /* CSS */
   .indicator {
     color: orange;

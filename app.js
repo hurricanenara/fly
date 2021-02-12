@@ -81,41 +81,7 @@ $(document).ready(() => {
         // .offset({top: (startPoint.top) + (screenHeight * .2), left: riverPos.left});
         // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
     } else if (!isMobile && !isiPad) {
-        $('.dropdown-education').click(function() {
-            $('html, body').animate({scrollTop: 2200}, 2000);
-            $(this).toggleClass('faded opaque');
-            [$('.dropdown-experience'),$('.dropdown-projects')].forEach(item => {
-                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
-            })
-        });
-        $('.dropdown-experience').click(function() {
-            $('html, body').animate({scrollTop: 6500}, 1800);
-            $(this).toggleClass('faded opaque');
-            [$('.dropdown-education'),$('.dropdown-projects')].forEach(item => {
-                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
-            })
-        });
-        $('.dropdown-projects').click(function() {
-            $('html, body').animate({scrollTop: 9100}, 1800);
-            $(this).toggleClass('faded opaque');
-            [$('.dropdown-education'),$('.dropdown-experience')].forEach(item => {
-                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
-            })            
-        });
-        $('.dropdown-reset').click(function() {
-            $('html, body').animate({scrollTop: 0}, 1800)
-        });
-        $('.dropdown-exit').click(function() {
-            $('.clickable-options').hide();
-            $('.click-preference .guide').show();
-            [$('.dropdown-education'),$('.dropdown-experience'),$('.dropdown-projects')].forEach(item => {
-                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
-            })
-        });
-        $('.fa-mouse-pointer').click(() => {
-            $('.clickable-options').show();
-            $('.click-preference .guide').hide();
-        })
+
         document.addEventListener('scroll', () => {
             // $('.clickable-options').hide();
         })
@@ -158,7 +124,41 @@ $(document).ready(() => {
         plane.offset({top: startPoint.top, left: startPoint.left});
     }
     // import initWeather from './snow.js';
-    
+        $('.dropdown-education').click(function() {
+            $('html, body').animate({scrollTop: 2200}, 2000);
+            $(this).toggleClass('faded opaque');
+            [$('.dropdown-experience'),$('.dropdown-projects')].forEach(item => {
+                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
+            })
+        });
+        $('.dropdown-experience').click(function() {
+            $('html, body').animate({scrollTop: 6500}, 1800);
+            $(this).toggleClass('faded opaque');
+            [$('.dropdown-education'),$('.dropdown-projects')].forEach(item => {
+                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
+            })
+        });
+        $('.dropdown-projects').click(function() {
+            $('html, body').animate({scrollTop: 9100}, 1800);
+            $(this).toggleClass('faded opaque');
+            [$('.dropdown-education'),$('.dropdown-experience')].forEach(item => {
+                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
+            })            
+        });
+        $('.dropdown-reset').click(function() {
+            $('html, body').animate({scrollTop: 0}, 1800)
+        });
+        $('.dropdown-exit').click(function() {
+            $('.clickable-options').hide();
+            $('.click-preference .guide').show();
+            [$('.dropdown-education'),$('.dropdown-experience'),$('.dropdown-projects')].forEach(item => {
+                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
+            })
+        });
+        $('.fa-mouse-pointer').click(() => {
+            $('.clickable-options').show();
+            $('.click-preference .guide').hide();
+        })
     window.addEventListener('resize', () => {
     })
     

@@ -440,6 +440,7 @@ body {
 
 .click-preference i {
   font-size: 34px;
+  cursor: pointer;
 }
 .clickable-options {
   display: none;

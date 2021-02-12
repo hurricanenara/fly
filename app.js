@@ -21,6 +21,7 @@ $(document).ready(() => {
     var isIPadPro = navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform);
     let isiPad = navigator.userAgent.match(/iPad|surfaceDuo/i) !== null;
     const startPoint = $('.start-point').position();
+    const treeBunch = $('.tree-bunch');
     // if (!isMobile || !isiPad) basicClouds.forEach(basicCloud => basicCloud.css('display', 'none'))
     if (isiPad || isIPadPro) {
         // let offsetTop = screenHeight * .1;
@@ -80,6 +81,66 @@ $(document).ready(() => {
         // .offset({top: (startPoint.top) + (screenHeight * .2), left: riverPos.left});
         // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
     } else if (!isMobile && !isiPad) {
+        $('.dropdown-education').click(function() {
+            $('html, body').animate({scrollTop: 2200}, 2000);
+            $(this).toggleClass('faded opaque');
+            [$('.dropdown-experience'),$('.dropdown-projects')].forEach(item => {
+                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
+            })
+        });
+        $('.dropdown-experience').click(function() {
+            $('html, body').animate({scrollTop: 6500}, 1800);
+            $(this).toggleClass('faded opaque');
+            [$('.dropdown-education'),$('.dropdown-projects')].forEach(item => {
+                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
+            })
+        });
+        $('.dropdown-projects').click(function() {
+            $('html, body').animate({scrollTop: 9100}, 1800);
+            $(this).toggleClass('faded opaque');
+            [$('.dropdown-education'),$('.dropdown-experience')].forEach(item => {
+                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
+            })            
+        });
+        $('.dropdown-reset').click(function() {
+            $('html, body').animate({scrollTop: 0}, 1800)
+        });
+        $('.dropdown-exit').click(function() {
+            $('.clickable-options').hide();
+            $('.click-preference .guide').show();
+            [$('.dropdown-education'),$('.dropdown-experience'),$('.dropdown-projects')].forEach(item => {
+                if (item.css('opacity') === "1") item.toggleClass('opaque faded');
+            })
+        });
+        $('.fa-mouse-pointer').click(() => {
+            $('.clickable-options').show();
+            $('.click-preference .guide').hide();
+        })
+        document.addEventListener('scroll', () => {
+            // $('.clickable-options').hide();
+        })
+        // $('.dropdown-education').click(function() {
+        //     window.scrollTo({
+        //         top: 2200,
+        //         left: 0,
+        //         behavior: 'smooth'
+        //     })
+        // })
+        // $('.dropdown-experience').click(function() {
+        //     window.scrollTo({
+        //         top: 6500,
+        //         left: 0,
+        //         behavior: 'smooth'
+        //     })
+        // })
+        // $('.dropdown-projects').click(function() {
+        //     window.scrollTo({
+        //         top: 9100,
+        //         left: 0,
+        //         behavior: 'smooth'
+        //     })
+        // })
+        console.log(treeBunch)
         console.log(navigator.userAgent)
         flightPath = {
             //curviness of 0 is rigid motion
@@ -99,27 +160,10 @@ $(document).ready(() => {
     // import initWeather from './snow.js';
     
     window.addEventListener('resize', () => {
-        // console.log(`H: ${window.innerHeight}`, `W: ${window.innerWidth}`)
-        // console.log(height, width);
-        // console.log("reload called")
-        // this.location.reload();
     })
     
-
-    
-        // console.log(config.apiKey, "key");
-        // console.log(isMobile ? "Mobile" : "Desktop")
-
-    
         const controller = new ScrollMagic.Controller({
-            // container: "#example-wrapper"
-        });
-    
-        // $('.paper-plane').offset({top: storyHeight + storyPos.top * .5, left: storyPos.left * 1.3})
-    
-    
-        
-        
+        });    
         // flightPath = {
         //     //curviness of 0 is rigid motion
         //     curviness: 1.25,

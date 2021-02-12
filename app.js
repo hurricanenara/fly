@@ -23,7 +23,7 @@ $(document).ready(() => {
     const startPoint = $('.start-point').position();
     const treeBunch = $('.tree-bunch');
     // if (!isMobile || !isiPad) basicClouds.forEach(basicCloud => basicCloud.css('display', 'none'))
-    if (isiPad || isIPadPro) {
+    if ((isiPad || isIPadPro) && screenWidth > 428) {
         socialList.every(icon => icon.css('fontSize', 50));
         console.log("iPad")
         flightPath = {
@@ -33,13 +33,13 @@ $(document).ready(() => {
             values: [
                 { x: storyWidth * .185, y: -(storyHeight * .01) },
                 { x: storyWidth * .7, y: -(storyHeight * 0.2) },
-                { x: storyWidth * .1, y: -(storyHeight * .6) },
-                { x: storyWidth * .68, y: -(storyHeight * .68) },
+                { x: storyWidth * .1, y: -(storyHeight * .5) },
+                { x: storyWidth * .6, y: -(storyHeight * .55) },
             ]
         };
-        plane.offset({top: startPoint.top, left: startPoint.left}).width(78).height(78)
-        storySVG.offset({top: screenHeight * .1})
-        storySVG.width(screenWidth * .9);
+        plane.offset({top: startPoint.top * 0.93, left: startPoint.left * 1.99}).width(78).height(78)
+        storySVG.offset({top: screenHeight * .16, left: screenWidth * 0.08})
+        storySVG.width(screenWidth * .8);
         if (screenWidth < 769) {
             storySVG.width(screenWidth * .85).offset({left: 38, top: screenHeight * .135});
             plane.offset({top: startPoint.top -28, left: startPoint.left +25}).width(78).height(78);
@@ -72,7 +72,7 @@ $(document).ready(() => {
         console.log("isMobile");
         plane
         .width(45).height(45)
-        .offset({top: startPoint.top + (screenHeight * .11), left: startPoint.left});
+        .offset({top: startPoint.top + (screenHeight * .12), left: startPoint.left});
 
         flightPath = {
             //curviness of 0 is rigid motion
@@ -86,7 +86,7 @@ $(document).ready(() => {
             ]
         };
 
-        storySVG.offset({top: screenHeight * .2})
+        storySVG.offset({top: screenHeight * .2, left: 8})
         storySVG.width(screenWidth * .95)
         // plane.offset({top: storySVG.height()});
 

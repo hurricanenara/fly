@@ -24,12 +24,6 @@ $(document).ready(() => {
     const treeBunch = $('.tree-bunch');
     // if (!isMobile || !isiPad) basicClouds.forEach(basicCloud => basicCloud.css('display', 'none'))
     if (isiPad || isIPadPro) {
-        // let offsetTop = screenHeight * .1;
-        // let offsetLeft = screenWidth * .35;
-        // cloudCircle.offset({top: -offsetTop, left: -offsetLeft});
-        // cloudText.offset({top: screenHeight * .36});
-        // console.log(cloudCircle.position());
-        // console.log(screenHeight * .45)
         socialList.every(icon => icon.css('fontSize', 50));
         console.log("iPad")
         flightPath = {
@@ -69,6 +63,9 @@ $(document).ready(() => {
 
     if (isMobile || screenWidth < 450) {
         cloudCircle.offset({top: -screenHeight * .35});
+        $('.fa-mouse-pointer')
+            .css('fontSize', 25)
+            .css('marginTop', 11)
         console.log(basicClouds)
         // cloudCircle.width(300).height(300);
         socialList.every(icon => icon.css('fontSize', 30))

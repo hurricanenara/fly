@@ -1,7 +1,7 @@
-
 const API_KEY = "cfc258c75e1da2149c33daffd07a911d";
 
 $(document).ready(() => {
+    console.log("Hi, welcome to Nara Land!");
     const intro = document.querySelector('.intro');
     const intro2 = document.querySelector('.intro-2');
     const plane = $(".paper-plane");
@@ -25,7 +25,6 @@ $(document).ready(() => {
     // if (!isMobile || !isiPad) basicClouds.forEach(basicCloud => basicCloud.css('display', 'none'))
     if ((isiPad || isIPadPro) && screenWidth > 428) {
         socialList.every(icon => icon.css('fontSize', 50));
-        console.log("iPad")
         flightPath = {
             //curviness of 0 is rigid motion
             curviness: 1.25,
@@ -54,11 +53,8 @@ $(document).ready(() => {
                 { x: storyWidth * .6, y: -(storyHeight * .6) },
             ]
         };
-            console.log('smaller');
         }
-        console.log(plane.position());
         basicClouds.width(screenWidth).height(screenWidth).offset({top: screenHeight * .15, left: screenWidth * .12})
-        console.log(basicClouds.height())
     }
 
     if (isMobile || screenWidth < 450) {
@@ -66,10 +62,8 @@ $(document).ready(() => {
         $('.fa-mouse-pointer')
             .css('fontSize', 25)
             .css('marginTop', 11)
-        console.log(basicClouds)
         // cloudCircle.width(300).height(300);
         socialList.every(icon => icon.css('fontSize', 30))
-        console.log("isMobile");
         plane
         .width(45).height(45)
         .offset({top: startPoint.top + (screenHeight * .12), left: startPoint.left});
@@ -93,7 +87,6 @@ $(document).ready(() => {
         // .offset({top: (startPoint.top) + (screenHeight * .2), left: riverPos.left});
         // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
     } else if (!isMobile && !isiPad && !isIPadPro) {
-        // console.log((navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 0) || navigator.platform === 'iPad')
         document.addEventListener('scroll', () => {
             // $('.clickable-options').hide();
         })
@@ -118,7 +111,6 @@ $(document).ready(() => {
         //         behavior: 'smooth'
         //     })
         // })
-        console.log(navigator.userAgent)
         flightPath = {
             //curviness of 0 is rigid motion
             curviness: 1.25,
@@ -130,7 +122,6 @@ $(document).ready(() => {
                 { x: storyWidth * .55, y: -(storyHeight * 0.7) },
             ]
         };
-        console.log(startPoint, 'startPoint')
         // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
         plane.offset({top: startPoint.top, left: startPoint.left});
     }
@@ -209,7 +200,6 @@ $(document).ready(() => {
             .addTo(controller);
         
         // scene.on('update', e => {
-        //     console.log(e.scrollPos)
         //     if (e.scrollPos > 4000) {
         //         $('.education').remove()
         //     }
@@ -452,7 +442,6 @@ function moveSnow() {
 function getWeather() {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition( function(position) { 
-            // console.log("Found your location \nLat : "+position.coords.latitude+" \nLang :"+ position.coords.longitude);
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
             $.ajax({
@@ -477,7 +466,7 @@ function getWeather() {
             })
         });
     } else {
-        console.log("Browser doesn't support geolocation");
+        console.log("location access denied");
     }
 }
 
@@ -495,7 +484,6 @@ function getWeather() {
 window.addEventListener('load', getWeather);
 // window.addEventListener('load', render);
 // $(window).bind('resize', function(e) {
-//     console.log("resize called")
 //   if (window.RT) clearTimeout(window.RT);
 //   window.RT = setTimeout(function()
 //   {

@@ -411,9 +411,9 @@ body {
   left: -20%;
 }
 
-.feedback:hover .tooltip-bottom {
+/* .feedback:hover .tooltip-bottom {
   display: block;
-}
+} */
 
 .fa-envelope:hover {
   /* color: rgb(166, 166, 166); */
@@ -435,7 +435,7 @@ body {
 
 .click-preference span {
   font-size: .85em;
-  opacity: .74;
+  opacity: .64;
 }
 
 .click-preference i {
@@ -464,7 +464,6 @@ body {
 .opaque {
   opacity: 1;
 }
-
 
 .clickable-options li span:last-of-type {
   margin-left: 28%;

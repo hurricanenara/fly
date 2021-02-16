@@ -162,6 +162,7 @@ $(document).ready(() => {
         $('.dropdown-exit').click(function() {
             $('.clickable-options').hide();
             $('.click-preference .guide').show();
+            $('.weatherTemp').css('marginTop', 0);
             [$('.dropdown-education'),$('.dropdown-experience'),$('.dropdown-projects')].forEach(item => {
                 if (item.css('opacity') === "1") item.toggleClass('opaque faded');
             })
@@ -169,6 +170,7 @@ $(document).ready(() => {
         $('.fa-mouse-pointer').click(() => {
             $('.clickable-options').show();
             $('.click-preference .guide').hide();
+        $('.weatherTemp').css('marginTop', 36);
         })
     window.addEventListener('resize', () => {
     })

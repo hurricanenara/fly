@@ -23,6 +23,9 @@ $(document).ready(() => {
     const startPoint = $('.start-point').position();
     const treeBunch = $('.tree-bunch');
     // if (!isMobile || !isiPad) basicClouds.forEach(basicCloud => basicCloud.css('display', 'none'))
+    $('.fa-file-pdf').hover(function() {
+        $(this).attr('title', "Coming soon")
+    })
     if ((isiPad || isIPadPro) && screenWidth > 428) {
         socialList.every(icon => icon.css('fontSize', 50));
         flightPath = {

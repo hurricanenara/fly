@@ -358,6 +358,10 @@ body {
   cursor: pointer;
 }
 
+.social ul li:last-of-type {
+  /* pointer-events: none; */
+}
+
 .social ul li a:link,
 .social ul li a:active,
 .social ul li a:visited {

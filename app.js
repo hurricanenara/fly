@@ -130,7 +130,7 @@ $(document).ready(() => {
     }
     // import initWeather from './snow.js';
         $('.dropdown-education').click(function() {
-            $('html, body').animate({scrollTop: 2200}, 2000);
+            $('html, body').animate({scrollTop: 2250}, 2000);
             $(this).toggleClass('faded opaque');
             [$('.dropdown-experience'),$('.dropdown-projects')].forEach(item => {
                 if (item.css('opacity') === "1") item.toggleClass('opaque faded');

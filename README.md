@@ -1,2 +1,2 @@
-# hurricanenara.github.io
-### [Fly with me!](https://hurricanenara.github.io/)
+# Nara's Website
+### [Fly with me!](https://narakim.com)

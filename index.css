@@ -525,6 +525,22 @@ body {
     top: 18%;
     /* right: -36%; */
   }
+
+  .weatherTemp div {
+    padding-top: 5px;
+    font-size: 10px;
+  }
+  
+  #weatherImage {
+    width: 53px;
+    height: 53px;
+    margin-top: 20px;
+  }
+
+  .guide {
+    font-size: 10px;
+  }
+  
   .indicator {
     color: brown;
   }
@@ -562,7 +578,7 @@ body {
   }
 
   .exp-grid-row:last-of-type {
-    height: 25px;
+    /* height: 25px; */
   }
   .exp-grid-3 span {
     font-size: .8em;
@@ -664,6 +680,9 @@ body {
   .exp-grid-3 {
     row-gap: 35px;
   }
+}
+
+.weatherTemp {
 }
 
 

@@ -61,6 +61,7 @@ $(document).ready(() => {
     }
 
     if (isMobile || screenWidth < 450) {
+        console.log("here");
         cloudCircle.offset({top: -screenHeight * .35});
         $('.fa-mouse-pointer')
             .css('fontSize', 25)
@@ -460,7 +461,7 @@ function getWeather() {
                     if (weatherDesc) {
                         // initWeather(snowColor, snowSpeed);
                         snowEntity = "&#x7c;";
-                        document.querySelector(".weatherTemp").innerHTML += `<img src="${weatherImage}" alt="">`
+                        document.querySelector(".weatherTemp").innerHTML += `<img id="weatherImage" src="${weatherImage}" alt="">`
                         + `<div>${tempF.toFixed(1)}&#8457;</div>`;
                         
                     }

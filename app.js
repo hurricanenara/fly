@@ -468,6 +468,13 @@ function getWeather() {
                         snowEntity = "&#x7c;";
                         document.querySelector(".weatherTemp").innerHTML += `<img id="weatherImage" src="${weatherImage}" alt="">`
                         + `<div>${Math.floor(tempF)}&#8457;</div>`;
+
+                        $(".weatherTemp div").hover(function() {
+                            document.querySelector('.weatherTemp div').innerHTML = `${Math.floor(tempC)}&#8451;`;
+                            setTimeout(function() {
+                                document.querySelector('.weatherTemp div').innerHTML = `${Math.floor(tempF)}&#8457;`;
+                            }, 1500);
+                        })
                         
                     }
                     // if (weatherId < 600 && weatherId < 700) initWeather();

@@ -378,7 +378,7 @@ body {
   flex-direction: column;
   position: absolute;
   right: 1%;
-  top: -40%
+  top: -40%;
   /* margin-top: 10px;
   margin-right: 10px; */
 }
@@ -681,10 +681,6 @@ body {
     row-gap: 35px;
   }
 }
-
-.weatherTemp {
-}
-
 
 @-webkit-keyframes arrowMove {
   to {

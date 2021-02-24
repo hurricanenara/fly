@@ -61,7 +61,6 @@ $(document).ready(() => {
     }
 
     if (isMobile || screenWidth < 450) {
-        console.log("here");
         cloudCircle.offset({top: -screenHeight * .35});
         $('.fa-mouse-pointer')
             .css('fontSize', 25)
@@ -444,25 +443,31 @@ function moveSnow() {
 }
 
 function getWeather() {
+    console.log("getweathercalled");
     if ("geolocation" in navigator) {
+        console.log("in geolocation");
         navigator.geolocation.getCurrentPosition( function(position) { 
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
+            debugger
             $.ajax({
                 type: "GET",
                 url: `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`,
                 success: function(response) {
+                    console.log("succes");
                     const tempC = response.main.temp;
                     const tempF = (tempC * (9/5)) + 32;
                     const iconId = response.weather[0].icon;
                     weatherId = response.weather[0].id;
                     weatherDesc = response.weather[0].main;
+                    debugger
                     const weatherImage = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
                     if (weatherDesc) {
+                        debugger
                         // initWeather(snowColor, snowSpeed);
                         snowEntity = "&#x7c;";
                         document.querySelector(".weatherTemp").innerHTML += `<img id="weatherImage" src="${weatherImage}" alt="">`
-                        + `<div>${tempF.toFixed(1)}&#8457;</div>`;
+                        + `<div>${Math.floor(tempF)}&#8457;</div>`;
                         
                     }
                     // if (weatherId < 600 && weatherId < 700) initWeather();

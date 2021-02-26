@@ -19,6 +19,7 @@ $(document).ready(() => {
     let isiPad = navigator.userAgent.match(/iPad|surfaceDuo/i) !== null;
     const isTablet = isIPadPro || isiPad;
     const windowWidth = $(window).width();
+    let widthGuide = $(window).width();
     const startPoint = $('.start-point').position();
     // if (!isMobile || !isiPad) basicClouds.forEach(basicCloud => basicCloud.css('display', 'none'))
     $('.fa-file-pdf').hover(function () {
@@ -28,7 +29,7 @@ $(document).ready(() => {
     const showError = () => {
         $('.desktop').remove();
         $('body').css({ 'background-image': `linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)` });
-        $('body').append(`<div class="expand-screen-message">Please make the window width a touch bigger!</div>`).css({ 'color': 'white', 'font-weight': '600', 'font-size': '24px', 'margin-top': '50%', 'margin-left': '25%' });
+        $('body').append(`<div class="expand-screen-message">Please make the window wider to at least 1025px</div><div class="current-w">Current width: <span class="width-span">${widthGuide}</span>px</div>`).css({ 'color': 'white', 'font-weight': '600', 'font-size': '24px', 'margin-top': '50%', 'margin-left': '25%', 'display': 'flex', 'flex-direction': 'column' });
     }
 
     const showSite = () => {
@@ -105,6 +106,7 @@ $(document).ready(() => {
         if (windowWidth < 1025) {
             showError();
             window.addEventListener('resize', () => {
+                $('.width-span').html($(window).width());
                 if ($(window).width() >= 1025) {
                     showSite();
                 } else {
@@ -115,8 +117,8 @@ $(document).ready(() => {
             });
         } else if (windowWidth >= 1025) {
             window.addEventListener('resize', () => {
-                console.log($(window).width(), 'window width')
                 if ($(window).width() < 1025) {
+                    $('body').empty();
                     showError();
                 } else {
                     showSite();
@@ -490,7 +492,7 @@ function getWeather() {
                     weatherId = response.weather[0].id;
                     weatherDesc = response.weather[0].main;
                     const weatherImage = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
-                    if (weatherDesc) {
+                    if (weatherDesc && $(window).width() > 1024) {
                         // initWeather(snowColor, snowSpeed);
                         snowEntity = "&#x7c;";
                         document.querySelector(".weatherTemp").innerHTML += `<img id="weatherImage" src="${weatherImage}" alt="">`

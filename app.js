@@ -102,7 +102,6 @@ $(document).ready(() => {
         // .offset({top: (startPoint.top) + (screenHeight * .2), left: riverPos.left});
         // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
     } else if (!isMobile && !isiPad && !isIPadPro) {
-        console.log('not mobile, desktop');
         if (windowWidth < 1025) {
             showError();
             window.addEventListener('resize', () => {

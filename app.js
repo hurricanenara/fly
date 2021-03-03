@@ -77,7 +77,6 @@ $(document).ready(() => {
         $('.fa-mouse-pointer')
             .css('fontSize', 25)
             .css('marginTop', 11)
-        // cloudCircle.width(300).height(300);
         socialList.every(icon => icon.css('fontSize', 30))
         plane
             .width(45).height(45)
@@ -97,10 +96,7 @@ $(document).ready(() => {
 
         storySVG.offset({ top: screenHeight * .2, left: 8 })
         storySVG.width(screenWidth * .95)
-        // plane.offset({top: storySVG.height()});
 
-        // .offset({top: (startPoint.top) + (screenHeight * .2), left: riverPos.left});
-        // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
     } else if (!isMobile && !isiPad && !isIPadPro) {
         if (windowWidth < 1025) {
             showError();
@@ -108,10 +104,6 @@ $(document).ready(() => {
                 $('.width-span').html($(window).width());
                 if ($(window).width() >= 1025) {
                     showSite();
-                } else {
-                    // $('.desktop').remove();
-                    // $('body').css({ 'background-image': `linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)` });
-                    // $('body').append(`<div class="expand-screen-message">Please make the window size a touch bigger!</div>`);                    
                 }
             });
         } else if (windowWidth >= 1025) {
@@ -205,17 +197,6 @@ $(document).ready(() => {
 
     const controller = new ScrollMagic.Controller({
     });
-    // flightPath = {
-    //     //curviness of 0 is rigid motion
-    //     curviness: 1.25,
-    //     autoRotate: true,
-    //     values: [
-    //         { x: storyWidth * .185, y: -(storyHeight * .01) },
-    //         { x: storyWidth * .7, y: -(storyHeight * 0.2) },
-    //         { x: storyWidth * .1, y: -(storyHeight * .6) },
-    //         { x: storyWidth * .55, y: -(storyHeight * 0.7) },
-    //     ]
-    // };
 
     const tween = new TimelineLite();
 
@@ -235,12 +216,6 @@ $(document).ready(() => {
         // .addIndicators()
         .setPin('.intro')
         .addTo(controller);
-
-    // scene.on('update', e => {
-    //     if (e.scrollPos > 4000) {
-    //         $('.education').remove()
-    //     }
-    // })
 
     let target1 = (isMobile || isiPad || isIPadPro) ? $('.intro').find('.basic-cloud') : $('.section1').find('.cloud-circle');
     let tl1 = new TimelineMax();
@@ -291,9 +266,7 @@ $(document).ready(() => {
         duration: 2200
     })
         .on("enter", () => $('.projects-grid a').css('pointer-events', 'auto'))
-        // .on("enter", () =>  $('.paper-plane').css('z-index', 0))
         .on("leave", () => $('.projects-grid a').css('pointer-events', 'none'))
-        // .on("leave", () =>  $('.paper-plane').css('z-index', 1))
         .setTween(tl3)
         // .addIndicators()
         .offset(8000)
@@ -314,7 +287,6 @@ $(document).ready(() => {
         .setTween(tl4)
         // .addIndicators()
         .offset(1000)
-        // .reverse(true)
         .addTo(controller);
 
     // text tween
@@ -376,105 +348,6 @@ $(document).ready(() => {
 
 })
 
-/*!
-// Snow.js - v0.0.3
-// kurisubrooks.com
-*/
-
-// Amount of Snowflakes
-var snowMax = 150;
-
-// Snowflake Colours
-var snowColor = ["#DDD", "#EEE"];
-var rainColor = ["#4b688b", "rgba(28, 99, 186, 0.77)"];
-
-// Snow Entity
-var snowEntity = "&#x2022;";
-var rainEntity = "&#x7c;";
-var entity;
-
-// Falling Velocity
-var snowSpeed = 0.75;
-var rainSpeed = 3.75;
-
-// Minimum Flake Size
-var snowMinSize = 16;
-
-// Maximum Flake Size
-var snowMaxSize = 28;
-
-// Refresh Rate (in milliseconds)
-var snowRefresh = 50;
-
-// Additional Styles
-var snowStyles = "z-index: 5; cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;";
-
-/*
-// End of Configuration
-// ----------------------------------------
-// Do not modify the code below this line
-*/
-
-var weatherWindow = document.querySelector(".weather");
-
-var snow = [],
-    pos = [],
-    coords = [],
-    lefr = [],
-    marginBottom,
-    marginRight;
-
-function randomise(range) {
-    rand = Math.floor(range * Math.random());
-    return rand;
-}
-
-function initWeather(entityColor, entitySpeed, entity) {
-    entitySpeed === 0.75 ? entity = "&#x2022;" : "&#x7c;";
-    var snowSize = snowMaxSize - snowMinSize;
-    marginBottom = document.body.scrollHeight - 5;
-    marginRight = document.body.clientWidth - 15;
-
-    for (i = 0; i <= snowMax; i++) {
-        coords[i] = 0;
-        lefr[i] = Math.random() * 15;
-        pos[i] = 0.03 + Math.random() / 10;
-        snow[i] = document.getElementById("flake" + i);
-        // snow[i].style.fontFamily = "inherit";
-        snow[i].size = randomise(snowSize) + snowMinSize;
-        snow[i].style.fontSize = snow[i].size + "px";
-        snow[i].style.color = entityColor[randomise(entityColor.length)];
-        snow[i].style.zIndex = 1000;
-        snow[i].sink = entitySpeed * snow[i].size / 5;
-        snow[i].posX = randomise(marginRight - snow[i].size);
-        snow[i].posY = randomise(2 * marginBottom - marginBottom - 2 * snow[i].size);
-        snow[i].style.left = snow[i].posX + "px";
-        snow[i].style.top = snow[i].posY + "px";
-    }
-
-    moveSnow();
-}
-
-function resize() {
-    marginBottom = document.body.scrollHeight - 5;
-    marginRight = document.body.clientWidth - 15;
-}
-
-function moveSnow() {
-    for (i = 0; i <= snowMax; i++) {
-        coords[i] += pos[i];
-        snow[i].posY += snow[i].sink;
-        snow[i].style.left = snow[i].posX + lefr[i] * Math.sin(coords[i]) + "px";
-        snow[i].style.top = snow[i].posY + "px";
-
-        if (snow[i].posY >= marginBottom - 2 * snow[i].size || parseInt(snow[i].style.left) > (marginRight - 3 * lefr[i])) {
-            snow[i].posX = randomise(marginRight - snow[i].size);
-            snow[i].posY = 0;
-        }
-    }
-
-    setTimeout("moveSnow()", snowRefresh);
-}
 
 function getWeather() {
     if ("geolocation" in navigator) {
@@ -492,8 +365,6 @@ function getWeather() {
                     weatherDesc = response.weather[0].main;
                     const weatherImage = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
                     if (weatherDesc && $(window).width() > 1024) {
-                        // initWeather(snowColor, snowSpeed);
-                        snowEntity = "&#x7c;";
                         document.querySelector(".weatherTemp").innerHTML += `<img id="weatherImage" src="${weatherImage}" alt="">`
                             + `<div>${Math.floor(tempF)}&#8457;</div>`;
 
@@ -505,7 +376,6 @@ function getWeather() {
                         })
 
                     }
-                    // if (weatherId < 600 && weatherId < 700) initWeather();
                 }
             })
         });
@@ -514,23 +384,6 @@ function getWeather() {
     }
 }
 
-// for (i = 0; i <= snowMax; i++) {
-//     document.write("<span id='flake" + i + "' style='" + snowStyles + "position:fixed;top:-" + snowMaxSize + "'>" + snowEntity + "</span>");
-// }
 
 
-
-
-
-
-// window.addEventListener('resize', resize);
-// window.addEventListener('load', initWeather);
 window.addEventListener('load', getWeather);
-// window.addEventListener('load', render);
-// $(window).bind('resize', function(e) {
-//   if (window.RT) clearTimeout(window.RT);
-//   window.RT = setTimeout(function()
-//   {
-//     this.location.reload(false); /* false to get page from cache */
-//   }, 100);
-// });

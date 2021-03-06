@@ -713,6 +713,7 @@ body {
   to {
     -webkit-transform: translate3d(0, 0.3rem, 0);
             transform: translate3d(0, 0.3rem, 0);
+    
   }
 }
 

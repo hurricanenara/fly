@@ -51,12 +51,21 @@ body {
   z-index: 1;
 }
 
-.st14{
-  fill:#FACC00;
+.st15{
+  fill:#FAF200;
+    -webkit-animation: fishMove 1500ms infinite alternate;
+          animation: fishMove 1500ms infinite alternate;
 }
-
-.st15{fill:#FAF200;}
-.st16{fill:#D9FA00;}
+.st16{
+  fill:#D9FA00;
+    -webkit-animation: fishMove 1500ms infinite alternate;
+          animation: fishMove 1500ms infinite alternate;
+}
+.st17{
+  fill:#95ebba;
+    -webkit-animation: fishMove 1500ms infinite alternate;
+          animation: fishMove 1500ms infinite alternate-reverse;
+}
 
 .indicator {
   /* text-shadow: 1px 1px 1px white; */
@@ -700,6 +709,19 @@ body {
   }
 }
 
+@-webkit-keyframes fishMove {
+  to {
+    -webkit-transform: translate3d(0, 0.3rem, 0);
+            transform: translate3d(0, 0.3rem, 0);
+  }
+}
+
+@keyframes fishMove {
+  to {
+    -webkit-transform: translate3d(0.3rem, 0rem, 0);
+            transform: translate3d(0.3rem, 0.3rem, 0);
+  }
+}
 
 .drop {
   background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);

@@ -23,10 +23,13 @@
 
 <body>
     <div class="desktop">
-            <img ondragstart="drag(event)" draggable="true" class="soda-img" src="/assets/imgs/soda.png" alt="">
+            <img ondragstart="drag(event)" draggable="true" id="soda-img" src="/assets/imgs/soda.png" alt="">
             <img draggable="true" class="plastic-img" src="/assets/imgs/plastic.png" alt="">
             <img draggable="true" class="cigarettes-img" src="/assets/imgs/cigarettes.png" alt="">
-            <img ondrop="drop(event)" ondragover="allowDrop(event)" class="recycle-img" src="/assets/imgs/recycle.png" alt="">
+            <div id="recycle-img" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-color: red; z-index: 50; margin: 20px;">
+
+            </div>
+            <!-- <img ondrop="drop(event" ondragover="allowDrop(event)" class="recycle-img" src="/assets/imgs/recycle.png" alt=""> -->
             <!-- <svg class="recycle" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
                 <g id="trash">
                     <path class="st0" d="M70.29,81.66L89.07,22.2c1.34-10.82-0.52-16.88-8.34-16.88l-55.78,0c-7.82,0-9.66,6.01-8.34,16.88l19.76,58.77
@@ -528,5 +531,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/Draggable.min.js" integrity="sha512-RDX1eDxp3ORwtRRL6pxKFQRCMn2TjxuHevOkw70yuvTxrGLs7+inPtL2BVtHSkW4zXmG4s+CoKgPoqJsndzHcQ==" crossorigin="anonymous"></script> -->
 
 </body>
+<script>
+    function allowDrop(e) {
+        e.preventDefault();
+        console.log('allowDrop');
+    }
+    function drag(e) {
+        e.dataTransfer.setData('text', e.target.id);
+        console.log('drag', e.dataTransfer.getData('text'));
+    }
+    function drop(e) {
+        e.preventDefault();
+        let data = e.dataTransfer.getData('text');
+        // e.target.appendChild(document.getElementById(data));
+        console.log('drop', data);
+        
+    }
+</script>
 
 </html>

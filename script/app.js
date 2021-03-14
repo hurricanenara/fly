@@ -21,6 +21,9 @@ $(document).ready(() => {
     const windowWidth = $(window).width();
     let widthGuide = $(window).width();
     const startPoint = $('.start-point').position();
+    const soda = $('.soda');
+    const bottles = $('.bottles');
+    const cigarettes = $('.cigarettes');
     // if (!isMobile || !isiPad) basicClouds.forEach(basicCloud => basicCloud.css('display', 'none'))
     $('.fa-file-pdf').hover(function () {
         $(this).attr('title', "Coming soon")
@@ -116,6 +119,29 @@ $(document).ready(() => {
                 }
             });
         }
+        const sodaPosition = soda.position();
+        const cigarettesPosition = cigarettes.position();
+        const bottlesPosition = bottles.position();
+        $('#soda-img').offset({top: sodaPosition.top, left: sodaPosition.left})
+        $('.cigarettes-img').offset({top: cigarettesPosition.top, left: cigarettesPosition.left})
+        $('.plastic-img').offset({top: bottlesPosition.top, left: bottlesPosition.left})
+
+        const drag = (event) => {
+        event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(data));
+        }
+
+        function allowDrop(event) {
+        event.preventDefault();
+        }
+
+
+
         document.addEventListener('scroll', () => {
             // $('.clickable-options').hide();
         })
@@ -154,7 +180,27 @@ $(document).ready(() => {
         // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
         plane.offset({ top: startPoint.top, left: startPoint.left });
     }
-    // import initWeather from './snow.js';
+
+    // draggable functions
+    // function allowDrop(e) {
+    //     e.preventDefault();
+    // }
+    // function drag(e) {
+    //     e.dataTransfer.setData('text', e.target.id);
+    // }
+    // function drop(e) {
+    //     e.preventDefault();
+    //     let data = e.dataTransfer.getData('text');
+    //     e.target.appendChild(document.getElementById(data));
+    // }
+
+    // $('.recycle-img').droppable({
+    //     drop: function(event, ui) {
+    //         if (!ui.draggable.hasClass('dropped')) return false;
+    //         ui.draggable.remove();
+    //     }
+    // })
+
     $('.dropdown-education').click(function () {
         $('html, body').animate({ scrollTop: 2250 }, 2000);
         $(this).toggleClass('faded opaque');

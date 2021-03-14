@@ -742,3 +742,47 @@ body {
 @-moz-keyframes fall {
 	to {margin-top:900px;}
 }
+
+.st0{fill:#71fb81;}
+.st1{fill:#2480AD;}
+
+.st23{fill:#ABABAB;}
+.st24{fill:#C41414;}
+.st25{fill:#688BF2;}
+.st26{fill:#DBE4FF;}
+.st27{fill:#FFFFFF;}
+
+.st28{fill:#3D3A3A;}
+.st29{fill:#A85905;}
+.st30{fill:#99ABE0;}
+
+.st31{opacity:0.9608;fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+.st32{opacity:0.9608;fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+.st33{fill:#BFCCF5;}
+
+#recycle-img {
+  width: 85px;
+  height: 85px;
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+}
+
+#soda-img {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  z-index: 20;
+}
+.plastic-img {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  z-index: 20;
+}
+.cigarettes-img {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  z-index: 20;
+}

@@ -123,8 +123,8 @@ $(document).ready(() => {
         const cigarettesPosition = cigarettes.position();
         const bottlesPosition = bottles.position();
         $('#soda-img').offset({top: sodaPosition.top, left: sodaPosition.left})
-        $('.cigarettes-img').offset({top: cigarettesPosition.top, left: cigarettesPosition.left})
-        $('.plastic-img').offset({top: bottlesPosition.top, left: bottlesPosition.left})
+        $('#cigarettes-img').offset({top: cigarettesPosition.top, left: cigarettesPosition.left})
+        $('#plastic-img').offset({top: bottlesPosition.top, left: bottlesPosition.left})
 
         const drag = (event) => {
         event.dataTransfer.setData("text", event.target.id);

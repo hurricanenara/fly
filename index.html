@@ -24,9 +24,9 @@
 <body>
     <div class="desktop">
             <img ondragstart="drag(event)" draggable="true" id="soda-img" src="/assets/imgs/soda.png" alt="">
-            <img draggable="true" class="plastic-img" src="/assets/imgs/plastic.png" alt="">
-            <img draggable="true" class="cigarettes-img" src="/assets/imgs/cigarettes.png" alt="">
-            <div id="recycle-img" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-color: red; z-index: 50; margin: 20px;">
+            <img ondragstart="drag(event)" draggable="true" draggable="true" id="plastic-img" src="/assets/imgs/plastic.png" alt="">
+            <img ondragstart="drag(event)" draggable="true" draggable="true" id="cigarettes-img" src="/assets/imgs/cigarettes.png" alt="">
+            <div id="recycle-img" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-color: transparent; border: 1px solid black; z-index: 50; margin: 20px;">
 
             </div>
             <!-- <img ondrop="drop(event" ondragover="allowDrop(event)" class="recycle-img" src="/assets/imgs/recycle.png" alt=""> -->
@@ -532,6 +532,8 @@
 
 </body>
 <script>
+    let count = 0;
+    const space = [15, 35, 50];
     function allowDrop(e) {
         e.preventDefault();
         console.log('allowDrop');
@@ -544,8 +546,13 @@
         e.preventDefault();
         let data = e.dataTransfer.getData('text');
         // e.target.appendChild(document.getElementById(data));
-        console.log('drop', data);
         
+        $(`#${data}`).css({ 'top': "", 'left': space[count] });
+        $(`#${data}`).css({ 'margin-top': '3%' });
+        e.target.append(document.getElementById(data));
+        console.log('drop', data, count);
+        count++;
+
     }
 </script>
 

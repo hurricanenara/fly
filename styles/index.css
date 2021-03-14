@@ -774,13 +774,13 @@ body {
   height: 50px;
   z-index: 20;
 }
-.plastic-img {
+#plastic-img {
   position: fixed;
   width: 50px;
   height: 50px;
   z-index: 20;
 }
-.cigarettes-img {
+#cigarettes-img {
   position: fixed;
   width: 50px;
   height: 50px;

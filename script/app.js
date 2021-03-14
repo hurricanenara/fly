@@ -126,19 +126,7 @@ $(document).ready(() => {
         $('#cigarettes-img').offset({top: cigarettesPosition.top, left: cigarettesPosition.left})
         $('#plastic-img').offset({top: bottlesPosition.top, left: bottlesPosition.left})
 
-        const drag = (event) => {
-        event.dataTransfer.setData("text", event.target.id);
-        }
-
-        function drop(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("text");
-        event.target.appendChild(document.getElementById(data));
-        }
-
-        function allowDrop(event) {
-        event.preventDefault();
-        }
+        $('#soda-img').draggable();
 
 
 
@@ -179,6 +167,28 @@ $(document).ready(() => {
         };
         // plane.offset({top: (storySVG.height() * .9) + storyPos.top, left: riverPos.left});
         plane.offset({ top: startPoint.top, left: startPoint.left });
+    }
+
+    let count = 0;
+    const space = [15, 35, 50];
+    function allowDrop(e) {
+        e.preventDefault();
+        console.log('allowDrop');
+    }
+    function drag(e) {
+        e.dataTransfer.setData('text', e.target.id);
+        console.log('drag', e.dataTransfer.getData('text'));
+    }
+    function drop(e) {
+        e.preventDefault();
+        let data = e.dataTransfer.getData('text');
+        // e.target.appendChild(document.getElementById(data));
+        
+        $(`#${data}`).css({ 'top': "", 'left': space[count] });
+        $(`#${data}`).css({ 'margin-top': '3%' });
+        e.target.append(document.getElementById(data));
+        console.log('drop', data, count);
+        count++;
     }
 
     // draggable functions

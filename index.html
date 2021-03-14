@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/styles/index.css" type="text/css">
     <link rel="shortcut icon" href="/assets/logo/pony.ico" type="image/x-icon">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&display=swap"
@@ -23,7 +24,8 @@
 
 <body>
     <div class="desktop">
-            <img ondragstart="drag(event)" draggable="true" id="soda-img" src="/assets/imgs/soda.png" alt="">
+            <!-- <img ondragstart="drag(event)" draggable="true" id="soda-img" src="/assets/imgs/soda.png" alt=""> -->
+            <img id="soda-img" src="/assets/imgs/soda.png" alt="">
             <img ondragstart="drag(event)" draggable="true" draggable="true" id="plastic-img" src="/assets/imgs/plastic.png" alt="">
             <img ondragstart="drag(event)" draggable="true" draggable="true" id="cigarettes-img" src="/assets/imgs/cigarettes.png" alt="">
             <div id="recycle-img" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-color: transparent; border: 1px solid black; z-index: 50; margin: 20px;">
@@ -532,28 +534,28 @@
 
 </body>
 <script>
-    let count = 0;
-    const space = [15, 35, 50];
-    function allowDrop(e) {
-        e.preventDefault();
-        console.log('allowDrop');
-    }
-    function drag(e) {
-        e.dataTransfer.setData('text', e.target.id);
-        console.log('drag', e.dataTransfer.getData('text'));
-    }
-    function drop(e) {
-        e.preventDefault();
-        let data = e.dataTransfer.getData('text');
-        // e.target.appendChild(document.getElementById(data));
+    // let count = 0;
+    // const space = [15, 35, 50];
+    // function allowDrop(e) {
+    //     e.preventDefault();
+    //     console.log('allowDrop');
+    // }
+    // function drag(e) {
+    //     e.dataTransfer.setData('text', e.target.id);
+    //     console.log('drag', e.dataTransfer.getData('text'));
+    // }
+    // function drop(e) {
+    //     e.preventDefault();
+    //     let data = e.dataTransfer.getData('text');
+    //     // e.target.appendChild(document.getElementById(data));
         
-        $(`#${data}`).css({ 'top': "", 'left': space[count] });
-        $(`#${data}`).css({ 'margin-top': '3%' });
-        e.target.append(document.getElementById(data));
-        console.log('drop', data, count);
-        count++;
+    //     $(`#${data}`).css({ 'top': "", 'left': space[count] });
+    //     $(`#${data}`).css({ 'margin-top': '3%' });
+    //     e.target.append(document.getElementById(data));
+    //     console.log('drop', data, count);
+    //     count++;
 
-    }
+    // }
 </script>
 
 </html>

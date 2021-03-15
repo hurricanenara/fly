@@ -126,8 +126,16 @@ $(document).ready(() => {
         $('#cigarettes-img').offset({top: cigarettesPosition.top, left: cigarettesPosition.left})
         $('#plastic-img').offset({top: bottlesPosition.top, left: bottlesPosition.left})
 
-        $('#soda-img').draggable();
-
+        // $('#soda-img').draggable();
+        // console.log($('#soda-img').draggable());
+        $('.waste').draggable();
+        $('#recycle-img').droppable({
+            drop: function(event, ui) {
+                const id = ui.draggable[0].id;
+                event.target.append(document.getElementById(id));
+                console.log(event.target);
+            }
+        })
 
 
         document.addEventListener('scroll', () => {

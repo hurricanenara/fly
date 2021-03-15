@@ -128,11 +128,26 @@ $(document).ready(() => {
 
         // $('#soda-img').draggable();
         // console.log($('#soda-img').draggable());
+        let count = 0;
         $('.waste').draggable();
         $('#recycle-img').droppable({
             drop: function(event, ui) {
+                const space = [15, 35, 50];
                 const id = ui.draggable[0].id;
                 event.target.append(document.getElementById(id));
+                ui.draggable.position({
+                    my: "bottom",
+                    at: "bottom",
+                    of: $(this),
+                    within: $('#recycle-img'),
+                    using: function(pos) {
+                        $(this).animate(pos, "slow", "linear").animate({opacity: 0.5});
+                        $(this).css({"left": space[count]});
+                        count++;
+                        console.log(count);
+                    }
+                })
+                ui.draggable.draggable({disabled: true});
                 console.log(event.target);
             }
         })
